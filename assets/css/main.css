@@ -280,52 +280,63 @@ body.menu-open .overlay { display: block; }
   transition: none !important;
 }
 
-/* 🌐 Responsive mobile — centré, le reste inchangé */
-@media screen and (max-width: 768px) {
-  /* évite tout scroll horizontal parasite */
-  html, body { overflow-x: hidden; }
+/* ====== Globaux ====== */
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
 
-  /* MENU (accueil) centré */
-  header {
-    min-height: 100vh;            /* centre verticalement */
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;      /* vertical */
-    align-items: center;          /* horizontal */
+/* Panels container (ok desktop & mobile) */
+.panels { position: fixed; inset: 0; display: grid; place-items: center; padding: 2rem 1rem; }
+.panel  { margin-inline: auto; }
+
+/* ====== Mobile ====== */
+@media (max-width: 768px) {
+  /* Header/menu parfaitement centré */
+  header{
+    min-height: 100svh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 16px;
   }
 
-  header ul {
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10%;                    /* aucune marge parasite */
+  /* Bloc de présentation centré et fluide */
+  .presentation{
+    width: 92vw; max-width: 620px;
+    margin: 0 auto 12px; padding: 16px; text-align: center;
+  }
+  .presentation h1{
+    font-size: clamp(20px, 5.4vw, 28px);
+    line-height: 1.2;
+  }
+  /* on garde l’animation (pas de wrap) */
+  .presentation h1::after{ white-space: nowrap; }
+
+  /* Menu en colonne, centré — sans toucher aux styles des boutons */
+  header ul{
+    width: 92vw; max-width: 420px;
+    margin: 12px auto 0;
+    display: flex; flex-direction: column; gap: 12px;
+    align-items: stretch;
+  }
+  header ul li{ width: 100%; }
+
+  /* Panels & sections : largeur cohérente et centrée */
+  .panels{
+    pointer-events: none; /* clics non capturés hors panneau */
+  }
+  .panel{
+    position: fixed;
+    left: 50%; top: 50%;
+    width: 92vw; max-width: 620px;
+    max-height: 88dvh;
+    overflow-y: auto; overflow-x: hidden;
+    margin: 0; pointer-events: auto;
+    transform: translate(-50%, -50%) !important;
+  }
+  .section-bloc,
+  .panel .section-bloc{
+    width: 92vw; max-width: 620px;
+    margin: 0 auto; padding: 16px;
   }
 
-  .presentation {
-    width: 90%;
-    padding: 1rem;
-    margin: 0 auto 1rem;          /* petit espace au-dessus des boutons */
-    text-align: center;
-  }
-
-  .presentation h1 { font-size: 22px; }
-  .presentation p  { font-size: 14px; }
-
-  /* Boutons */
-  ul { flex-direction: column; gap: 1rem; }
-  ul li a { padding: 0.8rem 1.2rem; font-size: 14px; }
-
-  /* Panneaux (inchangé) */
-  .section-bloc { width: 90%; padding: 1rem; }
-  .section-bloc h2 { font-size: 1.5rem; }
-  .section-bloc h3 { font-size: 1.2rem; }
-  .section-bloc ul { font-size: 1rem; }
-
-  .photo-profil { width: 180px; }
-  .btn-details { padding: 0.8rem 1.5rem; font-size: 14px; }
-
-  .liste-double { grid-template-columns: 1fr; gap: 2rem; }
-  .bloc-liste { text-align: left; }
-
-  .panel .section-bloc { width: 90%; padding: 1rem; margin: 0 auto; }
+  .liste-double{ grid-template-columns: 1fr; gap: 20px; }
+  .photo-profil{ width: clamp(150px, 45vw, 200px); }
 }
