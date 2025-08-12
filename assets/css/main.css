@@ -340,3 +340,14 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
   .liste-double{ grid-template-columns: 1fr; gap: 20px; }
   .photo-profil{ width: clamp(150px, 45vw, 200px); }
 }
+video {
+  display: block;
+  max-width: 800px; /* ou 100% si tu veux que ça s’adapte toujours */
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+
