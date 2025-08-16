@@ -1,643 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Sajed Bouchaddakh</title>
-
-  <!-- Ton style existant -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Style spécifique des panneaux -->
-  <link rel="stylesheet" href="assets/css/panels.css">
+
+  <title>PORTFOLIO SAJED BOUCHADDAKH</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: {} } };</script>
+  
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto; }
+  </style>
 </head>
-<body>
 
-  <!-- Vidéo de fond -->
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="assets/videos/videoPrez.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas les vidéos HTML5.
-  </video>
-
-  <!-- Page d’accueil (style géré par main.css) -->
-  <header>
-  <div class="presentation">
-    <h1 data-text="Portfolio Sajed Bouchaddakh"></h1>
-    <p>Coordinateur BIM & Développeur passionné par la conception et le développement de solutions logicielles sur mesure, adaptées aux enjeux métiers spécifiques</p>
-  </div>
-
-  <ul>
-    <li><a href="#presentation">Présentation</a></li>
-    <li><a href="#projets">Projets</a></li>
-    <li><a href="#apropos">À propos</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</header>
-
-<!-- Overlay + panneaux -->
-<div class="overlay" aria-hidden="true">
-  <div class="panels" role="region" aria-live="polite">
-
-    <!-- Présentation -->
-    <article class="panel" id="presentation" tabindex="-1" aria-label="Présentation">
-      <div class="section-bloc">
-        <button class="close-btn" title="Fermer (Échap)">×</button>
-
-
-        <h2>Présentation</h2>
-
-        <img src="assets/image/Photo_Sajed.jpg" class="photo-profil" alt="Photo de Sajed Bouchaddakh">
-
-        <h3>Introduction</h3>
-        <p>
-          Je suis Sajed Bouchaddakh, Coordinateur BIM & développeur logiciel avec une double compétence en BIM et en programmation.
-          J’ai évolué dans l'environnement technique exigeant du BTP, où j’ai acquis rigueur, adaptabilité et sens de la solution.
-          Curieux et engagé, je me forme en continu et m’adapte rapidement aux nouveaux outils pour concevoir des solutions pertinentes,
-          dans le BTP comme dans d’autres secteurs.
-        </p>
-
-        <h3>Objectifs professionnels</h3>
-        <ul>
-          <li>Rejoindre une équipe tech pour concevoir des solutions logicielles innovantes</li>
-          <li>Développer des applications web, desktop ou mobiles, robustes et maintenables</li>
-          <li>Automatiser des processus techniques, notamment dans des environnements métiers complexes</li>
-          <li>Mettre à profit ma connaissance du secteur de la construction et du BIM pour créer des outils adaptés aux besoins de terrain</li>
-          <li>Exploiter mon expérience en coordination BIM pour répondre aux besoins des équipes projet</li>
-          <li>Renforcer mon expertise en développement fullstack et en ingénierie logicielle</li>
-          <li>Contribuer à la digitalisation de projets, que ce soit dans le BTP ou d’autres secteurs techniques</li>
-          <li>Concevoir et déployer des solutions concrètes au plus proche des utilisateurs finaux</li>
-        </ul>
-
-        <h3>Savoir-faire technique</h3>
-
-        <h3>Tech / Informatique</h3>
-        <ul>
-          <li>Développement d'applications desktop (C#, .NET, Windows Forms...)</li>
-          <li>Développement web (ASP.NET Core, Razor Pages, Entity Framework...)</li>
-          <li>Développement mobile (.NET MAUI)</li>
-          <li>Déploiement cloud (Azure)</li>
-          <li>Intégration d'API (Revit API, pyRevit)</li>
-        </ul>
-
-        <h3>BTP / BIM</h3>
-        <ul>
-          <li>Modélisation 3D (Revit)</li>
-          <li>Coordination BIM (Revit, Navisworks)</li>
-          <li>Création gabarit logiciel (Revit)</li>
-          <li>Extraction de plans et coupes de constructions (coffrage EXE)</li>
-        </ul>
-
-        <h3>Savoir - être</h3>
-        <ul>
-          <li>Sens de l'analyse et résolution de problèmes</li>
-          <li>Autonomie et responsabilité dans la gestion de projet</li>
-          <li>Adaptabilité et curiosité technologique constante</li>
-          <li>Apprentissage rapide de nouveaux outils ou langages</li>
-          <li>Volonté forte de progresser en continu dans la tech et la création de solution</li>
-        </ul>
-
-        <h3>Parcours</h3>
-        <ul>
-          <li>Master Géomatique 4D & Aménagement durable (Sorbonne Université, 2023-2025) en alternance chez BIOSS avec mission de développement logiciel et de coordination de projets BIM</li>
-          <li>Licence Géographie & Aménagement du territoire (Sorbonne Université, 2020-2023)</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Projets -->
-    <article class="panel" id="projets" tabindex="-1" aria-label="Projets">
-      <div class="section-bloc">
-        <button class="close-btn" title="Fermer (Échap)">×</button>
-
-        <h2>Projets</h2>
-
-        <h3>Alternance BIOSS (09/23 - 09/25)</h3>
-
-        <h3>Projets de R&D Tech/Informatique</h3>
-
-        <br />
-
-        <h3>CoffraBIM (plugin Revit)</h3>
-
-        <h3>Objectif : Automatiser la production de plans d’exécution 2D dans Revit et accompagner la transition numérique du bureau d’études</h3>
-
-        <h3>Fonctionnalités principales</h3>
-        <ul>
-          <li>Génération automatique de vues (plans, coupes)</li>
-          <li>Placement intelligent des vues sur feuilles</li>
-          <li>Habillage dynamique (annotations, repères, cotations)</li>
-        </ul>
-
-        <h3>Organisation et méthodologie</h3>
-        <ul>
-          <li>Analyse fonctionnelle approfondie à travers des échanges réguliers avec les utilisateurs finaux (projeteurs, modeleurs)</li>
-          <li>Conception centrée utilisateur avec méthode Agile (sprints courts, retours fréquents, ajustements progressifs)</li>
-          <li>Rédaction de documentation technique claire et structurée pour accompagner l’adoption de l’outil</li>
-          <li>Tests en conditions réelles et intégration continue des retours pour affiner le développement</li>
-        </ul>
-
-        <div class="liste-double visible">
-          <div class="bloc-liste">
-            <h3>Environnement technique</h3>
-            <ul>
-              <li>C#</li>
-              <li>Revit API (Autodesk)</li>
-              <li>.NET Framework</li>
-              <li>Windows Forms</li>
-              <li>Visual Studio</li>
-            </ul>
-          </div>
-
-          <div class="bloc-liste">
-            <h3>Compétences mobilisées</h3>
-            <ul>
-              <li>Gestion de projet technique</li>
-              <li>Méthodologie Agile</li>
-              <li>Sprints itératifs</li>
-              <li>Coordination inter-équipe</li>
-              <li>Suivi des retours utilisateurs</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!--Présentation R&D & Outils-->
-        <section>
-          <h3>R&D CoffraBIM — 9 outils au service de l’automatisation</h3>
-          <p>
-            La R&amp;D a permis de développer <strong>9 outils</strong> qui, selon une étude interne,
-            <strong>automatisent 98&nbsp;%</strong> du processus d’extraction de la documentation 2D
-            à partir des maquettes. Ces outils sont présentés ci-dessous, chacun avec une courte
-            description et sa vidéo de démonstration.
-          </p>
-
-          <!-- 1. AutoPlan -->
-          <section>
-            <h4>AutoPlan</h4>
-            <p>Création rapide des vues de plans avec application des gabarits et structuration automatique.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoPlan.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoPlan</figcaption>
-            </figure>
-          </section>
-
-          <!-- 2. AutoCoupe -->
-          <section>
-            <h4>AutoCoupe</h4>
-            <p>Création automatique de coupes sur les éléments du modèle, avec paramétrage avancé.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBim_AutoCoupe.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoCoupe</figcaption>
-            </figure>
-          </section>
-
-          <!-- 3. AutoCote_Plan -->
-          <section>
-            <h4>AutoCote Plan</h4>
-            <p>Cotation automatique sur les vues en plan.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoCote_Plan.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoCote (Plan)</figcaption>
-            </figure>
-          </section>
-
-          <!-- 4. AutoCote_Coupe -->
-          <section>
-            <h4>AutoCote Coupe</h4>
-            <p>Cotation automatique sur les vues en coupe.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoCote_Coupe.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoCote (Coupe)</figcaption>
-            </figure>
-          </section>
-
-          <!-- 5. AutoNumero_Coupe -->
-          <section>
-            <h4>AutoNuméro</h4>
-            <p>Numérotation automatique des éléments selon plusieurs logiques définies.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoNumero_Coupe.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoNuméro (Coupes)</figcaption>
-            </figure>
-          </section>
-
-          <!-- 6. AutoEtiquette_Coupe -->
-          <section>
-            <h4>AutoÉtiquette Coupe</h4>
-            <p>Étiquetage automatique des éléments dans les vues de coupe.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBim_AutoEtiquette_Coupe.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoÉtiquette (Coupes)</figcaption>
-            </figure>
-          </section>
-
-          <!-- 7. AutoCoffrage -->
-          <section>
-            <h4>AutoCoffrage</h4>
-            <p>Superposition automatique des vues de plans (fonds de plans et impacts) pour le coffrage.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoCoffrage.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoCoffrage</figcaption>
-            </figure>
-          </section>
-
-          <!-- 8. AutoCarnet -->
-          <section>
-            <h4>AutoCarnet</h4>
-            <p>Placement automatique des coupes sur des feuilles pour générer un carnet de coupes  organisé.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_AutoCarnet.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — AutoCarnet</figcaption>
-            </figure>
-          </section>
-
-          <!-- 9. ManuPlan-->
-          <section>
-            <h4>ManuPlan</h4>
-            <p>Faciliter le placement des vues de plan sur des feuilles existantes ou à créer, sans navigation manuelle dans l’arborescence.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_ManuPlan.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — ManuPlan</figcaption>
-            </figure>
-          </section>
-
-          <!-- 9. ManuCoupe-->
-          <section>
-            <h4>ManuCoupe</h4>
-            <p>Faciliter le placement des coupes sur des feuilles existantes ou à créer, de manière automatisée.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffraBIM_ManuCoupe.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — ManuCoupe</figcaption>
-            </figure>
-          </section>
-
-          <!-- Disponibilité multi-version -->
-          <section>
-            <h4>Multi-version Revit</h4>
-            <p>
-              <strong>CoffraBIM</strong> est disponible sur plusieurs versions de Revit (gestion du <em>multi-versioning</em>)
-            </p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffrabim_Multi_Version.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Compatibilité multi-version Revit</figcaption>
-            </figure>
-          </section>
-        </section>
-
-
-        <br /><br />
-        <ul>
-          <li style="list-style-type: none; text-align: center;">
-            <a href="https://www.linkedin.com/in/sajed-bouchaddakh-784113207/">Plus de détails sur les outils du logiciel CoffraBIM sur les posts Linkedin</a>
-          </li>
-        </ul>
-        <br />
-
-        <h3>Plateforme BIOSS</h3>
-
-        <h3>Objectif : Centraliser le support technique, les retours utilisateurs et la documentation liée au plugin CoffraBIM.</h3>
-
-        <h3>Fonctionnalités principales</h3>
-        <ul>
-          <li>Guides illustrés et tutoriels pas-à-pas intégrés à la plateforme</li>
-          <li>Documentation technique pour l'accompagnement utilisateur</li>
-          <li>Formulaire d’amélioration connecté à une base de données interne</li>
-          <li>Liaison directe avec le plugin CoffraBIM pour faciliter l’accès au support</li>
-        </ul>
-
-        <h3>Organisation et méthodologie</h3>
-        <ul>
-          <li>Analyse des besoins récurrents exprimés par les utilisateurs internes</li>
-          <li>Modélisation des données pour structurer les retours et les formulaires</li>
-          <li>Déploiement en environnement cloud (Azure) avec mises à jour progressives</li>
-          <li>Amélioration continue de la plateforme selon les feedbacks reçus</li>
-        </ul>
-
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <h3>Environnement technique</h3>
-            <ul>
-              <li>C#</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>ASP.NET Core</li>
-              <li>Razor Pages</li>
-              <li>Entity Framework</li>
-              <li>SQLite</li>
-              <li>SQL Server</li>
-              <li>Azure</li>
-              <li>Visual Studio</li>
-            </ul>
-          </div>
-
-          <div class="bloc-liste">
-            <h3>Compétences mobilisées</h3>
-            <ul>
-              <li>Conception de base de données</li>
-              <li>Développement web fullstack</li>
-              <li>Documentation technique</li>
-              <li>Déploiement cloud</li>
-              <li>Agilité et adaptation continue</li>
-            </ul>
-          </div>
-        </div>
-
-        <section>
-          <h3>La plateforme BIOSS est une solution destinée à accompagner les équipes de BIOSS dans leur transition numérique.</h3>
-          <p>La plateforme BIOSS centralise l’accompagnement autour de CoffraBIM en offrant des guides illustrés, 
-            des tutoriels pas-à-pas et une documentation technique dédiée. Elle intègre un formulaire d’amélioration 
-            relié à une base de données interne et connecte directement les utilisateurs au plugin pour un accès rapide au support. 
-            Développée sur Azure, elle s’appuie sur une analyse régulière des besoins, une structuration des retours et des mises à 
-            jour continues pour répondre aux attentes des équipes.</p>
-          <section>
-            <h4>Plateforme BIOSS</h4>
-            <p>Une plateforme conçue pour accompagner l’adoption de CoffraBIM et soutenir la transition numérique.</p>
-            <figure>
-              <video controls preload="metadata">
-                <source src="assets/videos/coffrabim_Plateforme_Bioss.mp4" type="video/mp4" />
-              </video>
-              <figcaption>Démo — Plateforme BIOSS</figcaption>
-            </figure>
-          </section>
-        </section>
-
-        <br /><br />
-        <ul>
-          <li style="list-style-type: none; text-align: center;">
-            <a href="https://www.linkedin.com/in/sajed-bouchaddakh-784113207/">Plus de détails sur la Platforme BIOSS sur les posts Linkedin</a>
-          </li>
-        </ul>
-        <br />
-
-        <h3>Projets BIM</h3>
-
-        <h3>Automatisation des tâches</h3>
-        <ul>
-          <li>Automatisation de tâches répétitives à l’aide de Python avec pyRevit et Dynamo pour améliorer la productivité et réduire les erreurs humaines</li>
-        </ul>
-
-        <br />
-
-        <h3>Coordination BIM & modélisation BIM structurelle</h3>
-        <ul>
-          <li>Coordination BIM et modélisation BIM du coffrage béton armé sur les projets suivants :
-            <ul>
-              <li>Immeuble de bureaux TRUMPF – Villepinte</li>
-              <li>Ensemble immobilier mixte bureaux/logements – Marignan Immobilier, Montreuil</li>
-              <li>Résidence de 18 logements – SEQENS, Marly-le-Roi</li>
-            </ul>
-          </li>
-        </ul>
-
-        <br />
-
-        <h3>Production de documents d’exécution</h3>
-        <ul>
-          <li>Extraction des plans de coffrage et des coupes depuis Revit selon les besoins des équipes chantier</li>
-        </ul>
-
-        <br />
-
-        <h3>Création du gabarit entreprise</h3>
-        <ul>
-          <li>Conception du gabarit BIOSS : Création et structuration du gabarit et de la bibliothèque interne pour homogénéiser la production des projets BIM</li>
-        </ul>
-
-        <br />
-
-        <h3>Projets personnels</h3>
-        <h3>Cot-At-View (application mobile) – Projet en cours</h3>
-
-        <h3>Objectif</h3>
-        <ul>
-          <li>Moderniser la consultation et la gestion de plans de chantier sur site via une application mobile</li>
-          <li>Réduire la consommation de papier et d'encre tout en améliorant la qualité des documents d’exécution</li>
-        </ul>
-
-        <h3>Fonctionnalités</h3>
-        <ul>
-          <li>Visualisation de plans PDF sur mobile</li>
-          <li>Ajout d’annotations et de cotations manuelles</li>
-          <li>Gestion de la documentation</li>
-        </ul>
-
-        <h3>Organisation</h3>
-        <ul>
-          <li>Projet réalisé en autoformation continue, avec apprentissage en autonomie du développement mobile multiplateforme</li>
-          <li>Tests réguliers sur simulateur</li>
-          <li>Structuration du code en composants réutilisables</li>
-          <li>Documentation interne pour chaque module</li>
-          <li>Suivi des besoins et des idées via un backlog personnel</li>
-        </ul>
-
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <h3>Environnement technique</h3>
-            <ul>
-              <li>C#</li>
-              <li>XAML</li>
-              <li>.NET MAUI</li>
-              <li>Syncfusion</li>
-              <li>Visual Studio</li>
-            </ul>
-          </div>
-
-          <div class="bloc-liste">
-            <h3>Compétences mobilisées</h3>
-            <ul>
-              <li>Développement mobile en autoformation</li>
-              <li>Prototypage rapide et structuration modulaire</li>
-              <li>Gestion de projet individuel</li>
-              <li>Montée en compétence sur des frameworks modernes</li>
-            </ul>
-          </div>
-        </div>
-
-        <section>
-          <section>
-            <h4>Capture du MVP Cot-At-View</h4>
-            <img src="assets/image/mvp_CotAtView.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px;">
-          </section>
-
-          <section>
-            <h4>Vidéo du MVP de Cot-At-View</h4>
-            <figure style="max-width: 400px; margin: 0 auto;">
-              <video controls preload="metadata" style="width: 100%; height: auto; border-radius: 10px;">
-                <source src="assets/videos/video_mvp_CotAtView.mp4" type="video/mp4" />
-              </video>
-              <figcaption style="text-align: center; margin-top: .5rem;">
-                Démo — Cot-At-View
-              </figcaption>
-            </figure>
-          </section>
-      </div>
-    </article>
-
-    <!-- À propos -->
-    <article class="panel" id="apropos" tabindex="-1" aria-label="À propos">
-      <div class="section-bloc">
-        <button class="close-btn" title="Fermer">×</button>
-
-        <h2>À propos</h2>
-
-        <h3>Compétences (Informatique)</h3>
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <h3><strong>Langages informatiques :</strong></h3>
-            <ul>
-              <li>C#</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>XAML</li>
-            </ul>
-            <h3><strong>Frameworks et bibliothèques :</strong></h3>
-            <ul>
-              <li>.NET</li>
-              <li>.NET Core</li>
-              <li>Windows Forms</li>
-              <li>.NET MAUI</li>
-              <li>ASP.NET</li>
-              <li>Entity Framework</li>
-              <li>Razor Pages</li>
-            </ul>
-            <h3><strong>Cloud :</strong></h3>
-            <ul>
-              <li>Azure</li>
-            </ul>
-          </div>
-
-          <div class="bloc-liste">
-            <h3><strong>API et extensions :</strong></h3>
-            <ul>
-              <li>Revit API</li>
-              <li>PyRevit</li>
-            </ul>
-            <h3><strong>Bases de données :</strong></h3>
-            <ul>
-              <li>SQLite</li>
-              <li>SQL Server</li>
-            </ul>
-            <h3><strong>Outils :</strong></h3>
-            <ul>
-              <li>Visual Studio</li>
-              <li>Visual Studio Code</li>
-              <li>Inno Setup</li>
-            </ul>
-            <h3><strong>Types de développement :</strong></h3>
-            <ul>
-              <li>Web (opérationnel)</li>
-              <li>Desktop (.exe)</li>
-              <li>Mobile cross-platform</li>
-            </ul>
-          </div>
-        </div>
-
-        <br>
-        <h3>Compétences (SIG)</h3>
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <h3><strong>Logiciels :</strong></h3>
-            <ul>
-              <li>ArcGIS Pro</li>
-              <li>ArcGIS Online</li>
-              <li>QGIS</li>
-            </ul>
-          </div>
-          <div class="bloc-liste">
-            <h3><strong>Rôles :</strong></h3>
-            <ul>
-              <li>Création de cartes</li>
-              <li>Analyses statistiques</li>
-            </ul>
-          </div>
-        </div>
-
-        <br>
-        <h3>Compétences (BIM / BTP)</h3>
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <h3><strong>Logiciels :</strong></h3>
-            <ul>
-              <li>Revit</li>
-              <li>Dynamo</li>
-              <li>AutoCAD</li>
-              <li>Navisworks</li>
-            </ul>
-          </div>
-          <div class="bloc-liste">
-            <h3><strong>Rôles :</strong></h3>
-            <ul>
-              <li>Modélisation 3D</li>
-              <li>Coordination BIM</li>
-              <li>Création de gabarit logiciel</li>
-              <li>Extraction de plans et coupes (coffrage EXE)</li>
-            </ul>
-          </div>
-        </div>
-
-        <br>
-        <h3>Langues</h3>
-        <div class="liste-double">
-          <div class="bloc-liste">
-            <ul>
-              <li>Français : Langue maternelle</li>
-              <li>Anglais : Professionnel (C1)</li>
-              <li>Arabe littéraire : Courant</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Contact -->
-    <article class="panel" id="contact" tabindex="-1" aria-label="Contact">
-      <div class="section-bloc">
-        <button class="close-btn" title="Fermer (Échap)">×</button>
-
-        <h2>Contact</h2>
-
-        <div class="contact-infos">
-          <br>
-          <p style="text-align: center;"><strong>Email :</strong> sajedbouchaddakh@yahoo.com</p>
-
-          <a href="https://www.linkedin.com/in/sajed-bouchaddakh-784113207/" target="_blank" class="btn-details">Voir mon LinkedIn</a>
-          <br>
-          <a href="assets/docs/CV_Sajed_Bouchaddakh_Développement.pdf" download class="btn-details">Télécharger le CV Développeur</a>
-          <br>
-          <a href="assets/docs/CV_Sajed_Bouchaddakh_Coordination_BIM_Développement.pdf" download class="btn-details">Télécharger le CV Coordinateur BIM & Développeur</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</div>
-
-
-
-
-  <!-- Script du système de panneaux -->
-  <script src="assets/js/panels.js"></script>
+<body class="min-h-screen text-white bg-[radial-gradient(1200px_800px_at_70%_0%,#0a84ff_0%,#031a2e_40%,#000_80%)]">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/50">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#presentation" class="font-semibold tracking-wider uppercase">
+        PORTFOLIO SAJED BOUCHADDAKH
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#presentation" class="hover:text-blue-300">Présentation</a>
+        <a href="#projets" class="hover:text-blue-300">Projets</a>
+        <a href="#apropos" class="hover:text-blue-300">À Propos</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
+      </nav>
+      <a href="#contact" class="md:hidden rounded-xl bg-blue-600 hover:bg-blue-500 px-3 py-1.5 text-sm">Contact</a>
+    </div>
+  </header>
+
+  <!-- Halos décoratifs -->
+<!-- Halos décoratifs (hors sections) -->
+<!-- Halos décoratifs (hors sections) -->
+<div class="halo halo-projets" aria-hidden="true"></div>
+<div class="halo halo-apropos" aria-hidden="true"></div>
+<div class="halo halo-contact" aria-hidden="true"></div>
+
+
+
+
+  <!-- Emplacements où injecter les sections -->
+  <main>
+    <div data-include="assets/partials/presentation.html"></div>
+    <div data-include="assets/partials/projets.html"></div>
+    <div data-include="assets/partials/apropos.html"></div>
+    <div data-include="assets/partials/contact.html"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-10 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-white/60 text-sm">
+      © <span id="year"></span> Sajed Bouchaddakh — Tous droits réservés
+    </div>
+  </footer>
+
+  <!-- Scripts (ordre important) -->
+  <script src="assets/js/script.js" defer></script>    <!-- modales + sliders -->
+  <script src="assets/js/include.js" defer></script>  <!-- charge les partials -->
+
+  <!-- Maj de l'année -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
