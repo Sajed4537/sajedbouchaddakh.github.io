@@ -1,65 +1,32 @@
-/* Toujours devant le fond mais derrière le contenu 
-header, main, footer { position: relative; z-index: 1; }
-
-
-.halo {
-  position: absolute;        
-  pointer-events: none;
-  z-index: 0;
-  width: 1400px;
-  height: 900px;
-  filter: blur(10px);
-  background:
-    radial-gradient(1200px 750px at 30% 35%,
-      rgba(42,103,255,0.72) 0%,
-      rgba(11,27,46,0.60) 45%,
-      rgba(3,7,12,0.00) 72%);
+/* ------------------------------
+   Animations "fade-up"
+--------------------------------*/
+.animate-fade-up {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.halo-projets {
-  top: 1400px;                
-  left: 0;                    
-  transform: translateX(-32%);
-  background:
-    radial-gradient(1250px 780px at 22% 40%,
-      rgba(42,103,255,0.75) 0%,
-      rgba(11,27,46,0.58) 45%,
-      rgba(3,7,12,0.00) 72%);
+.animate-fade-up.is-inview {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-
-.halo-apropos {
-  top: 2200px;                
-  right: 0;                  
-  transform: translateX(30%); 
-  background:
-    radial-gradient(1300px 800px at 78% 35%,
-      rgba(42,103,255,0.70) 0%,
-      rgba(11,27,46,0.58) 45%,
-      rgba(3,7,12,0.00) 72%);
-}
-
-.halo-contact {
-  top: 2850px;                
-  left: 0;                    
-  transform: translateX(-32%);
-  background:
-    radial-gradient(1250px 780px at 22% 40%,
-      rgba(42,103,255,0.75) 0%,
-      rgba(11,27,46,0.58) 45%,
-      rgba(3,7,12,0.00) 72%);
-}
-
-
-@media (max-width: 1024px) {
-  .halo { width: 1200px; height: 780px; }
-  .halo-projets { left: -180px; }
-  .halo-apropos { right: -160px; }
-  .halo-contact { right: -140px; }
-}
-@media (max-width: 640px) {
-  .halo { width: 1000px; height: 660px; }
-  .halo-projets, .halo-apropos, .halo-contact {
-    left: 50%; right: auto; transform: translateX(-50%);
+/* Accessibilité : pas d’animation si l’utilisateur préfère réduire les mouvements */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
-}*/
+}
+
+/* Fallback si JS ne tourne pas (classe posée sur <html>) */
+.no-anim .animate-fade-up {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}

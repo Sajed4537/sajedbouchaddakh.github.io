@@ -1,20 +1,15 @@
-// assets/js/include.js
-async function loadPartials() {
-  const slots = Array.from(document.querySelectorAll("[data-include]"));
-  await Promise.all(slots.map(async (slot) => {
-    const url = slot.getAttribute("data-include");
+// Charge les partials puis déclenche un événement "partials:loaded"
+document.addEventListener('DOMContentLoaded', async () => {
+  const zones = [...document.querySelectorAll('[data-include]')];
+  await Promise.all(zones.map(async (el) => {
+    const url = el.getAttribute('data-include');
     try {
-      const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-      slot.innerHTML = await res.text();
-    } catch (err) {
-      console.error("Include error:", url, err);
-      slot.innerHTML = `<div class="text-red-400 text-sm p-4">Erreur de chargement: ${url}</div>`;
+      const res = await fetch(url, { cache: 'no-cache' });
+      el.innerHTML = await res.text();
+    } catch (e) {
+      console.error('Include error:', url, e);
+      el.innerHTML = '<div class="text-red-400">Erreur de chargement.</div>';
     }
   }));
-
-  // Ré-initialise modales et sliders présents dans les partials
-  if (window.App?.Modal?.initAll) window.App.Modal.initAll();
-  if (window.App?.Slider?.initAll) window.App.Slider.initAll();
-}
-document.addEventListener("DOMContentLoaded", loadPartials);
+  document.dispatchEvent(new Event('partials:loaded'));
+});
