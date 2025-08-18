@@ -101,438 +101,207 @@
     </div>
   </div>
 
-  <!-- Projets BIM / BTP -->
-  <div class="mt-14">
-    <h3 class="text-xl md:text-2xl font-semibold mb-4 animate-fade-up">Projets BIM / BTP 🏗️​</h3>
-
-    <!-- Grille -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger="100">
-      <!-- Tuile — Automatisation des tâches -->
-      <article class="rounded-2xl ring-1 ring-white/10 bg-white/5 p-5 md:p-6 flex flex-col justify-between animate-fade-up">
-        <header class="space-y-1.5">
-          <h4 class="text-lg md:text-xl font-bold">Automatisation des tâches</h4>
-          <p class="text-white/70 text-sm">
-            Automatisations avec <span class="text-white">Python</span> (pyRevit) et
-            <span class="text-white">Dynamo</span> pour améliorer la productivité et réduire les erreurs humaines.
-          </p>
-        </header>
-
-        <div class="mt-4">
-          <button
-            data-modal-open="bimAutoModal"
-            class="w-full rounded-xl px-3 py-2 ring-1 ring-white/20 hover:bg-white/10 text-sm">
-            Plus de détails
-          </button>
-        </div>
-      </article>
-
-      <!-- Tuile — Coordination & modélisation structurelle -->
-      <article class="rounded-2xl ring-1 ring-white/10 bg-white/5 p-5 md:p-6 flex flex-col justify-between animate-fade-up">
-        <header class="space-y-1.5">
-          <h4 class="text-lg md:text-xl font-bold">Coordination BIM & modélisation structurelle</h4>
-          <p class="text-white/70 text-sm">
-            Coordination et modélisation du coffrage béton armé (Revit) sur plusieurs opérations tertiaires & logements.
-          </p>
-        </header>
-
-        <div class="mt-4">
-          <button
-            data-modal-open="bimCoordModal"
-            class="w-full rounded-xl px-3 py-2 ring-1 ring-white/20 hover:bg-white/10 text-sm">
-            Plus de détails
-          </button>
-        </div>
-      </article>
-
-      <!-- Tuile — Création du gabarit entreprise -->
-      <article class="rounded-2xl ring-1 ring-white/10 bg-white/5 p-5 md:p-6 flex flex-col justify-between animate-fade-up">
-        <header class="space-y-1.5">
-          <h4 class="text-lg md:text-xl font-bold">Création du gabarit entreprise</h4>
-          <p class="text-white/70 text-sm">
-            Conception du gabarit <span class="text-white">BIOSS</span> et structuration de la bibliothèque interne
-            pour homogénéiser la production.
-          </p>
-        </header>
-
-        <div class="mt-4">
-          <button
-            data-modal-open="bimGabaritModal"
-            class="w-full rounded-xl px-3 py-2 ring-1 ring-white/20 hover:bg-white/10 text-sm">
-            Plus de détails
-          </button>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <!-- ======================= Modales BIM/BTP ======================= -->
-
-  <!-- Modal — Automatisation des tâches -->
-  <div id="bimAutoModal" data-modal class="hidden fixed inset-0 z-[998]" role="dialog" aria-modal="true">
-    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
-
-    <!-- Conteneur centré + scroll si besoin -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto">
-      <!-- Wrapper relatif pour ancrer la croix (desktop) -->
-      <div class="relative">
-        <!-- Carte -->
-        <div class="relative w-full md:max-w-5xl max-h-[92vh] overflow-y-auto rounded-3xl
-                    ring-1 ring-white/10 shadow-2xl
-                    bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                    [scrollbar-gutter:stable]">
-          <!-- Contenu -->
-          <div class="px-6 md:px-10 pt-8 pb-2">
-            <h4 class="text-3xl font-extrabold tracking-tight">Automatisation des tâches</h4>
-            <p class="mt-2 text-white/80 text-sm md:text-base leading-relaxed">
-              Automatisation de tâches répétitives pour accélérer la production, fiabiliser les livrables et limiter les erreurs humaines.
-            </p>
-          </div>
-
-          <div class="px-6 md:px-10 pb-8 grid md:grid-cols-2 gap-8">
-            <section>
-              <h5 class="font-semibold text-white mb-2">Technos & outils</h5>
-              <ul class="list-disc list-inside space-y-1.5 text-sm text-white/80 leading-relaxed">
-                <li>PyRevit (Autodesk Revit)</li>
-                <li>Python</li>
-                <li>Dynamo for Revit</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <!-- Croix : mobile fixe -->
-        <button data-modal-close aria-label="Fermer"
-                class="md:hidden fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       flex items-center justify-center text-lg font-bold transition">✕</button>
-
-        <!-- Croix : desktop déportée -->
-        <button data-modal-close aria-label="Fermer"
-                class="hidden md:flex absolute -top-12 -right-12 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       items-center justify-center text-lg font-bold transition">✕</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal — Coordination BIM & modélisation structurelle -->
-  <div id="bimCoordModal" data-modal class="hidden fixed inset-0 z-[998]" role="dialog" aria-modal="true">
-    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
-
-    <!-- Wrapper centré -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-      <!-- Wrapper relatif pour ancrer la croix (desktop) -->
-      <div class="relative">
-        <!-- Carte -->
-        <div class="relative w-full max-w-5xl rounded-3xl ring-1 ring-white/10 shadow-2xl
-                    bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
-          <!-- Contenu scrollable -->
-          <div class="max-h-[85vh] overflow-y-auto overscroll-contain">
-            <div class="px-6 md:px-10 pt-8 pb-2">
-              <h4 class="text-3xl font-extrabold tracking-tight">
-                Coordination BIM & modélisation BIM structurelle
-              </h4>
-              <p class="mt-2 text-white/80 text-sm md:text-base leading-relaxed">
-                Coordination d’équipes et modélisation du coffrage béton armé (Revit) :
-                réunions, synthèse, extraction documentaire.
-              </p>
-            </div>
-
-            <div class="px-6 md:px-10 pb-8 grid md:grid-cols-2 gap-8">
-              <!-- Colonne gauche : projets -->
-              <section>
-                <h5 class="font-semibold text-white mb-2">Projets</h5>
-                <ul class="list-disc list-inside space-y-1.5 text-sm text-white/80 leading-relaxed">
-                  <li>Immeuble de bureaux <span class="font-semibold text-white">TRUMPF</span> — Villepinte</li>
-                  <li>
-                    Ensemble immobilier mixte bureaux/logements&nbsp;—&nbsp;
-                    <span class="font-semibold text-white whitespace-nowrap">Marignan Immobilier</span>, Montreuil
-                  </li>
-                  <li>Résidence de 18 logements — <span class="font-semibold text-white">SEQENS</span>, Marly-le-Roi</li>
-                </ul>
-              </section>
-
-              <!-- Colonne droite (vide, contenu conservé) -->
-              <section></section>
-            </div>
-          </div>
-        </div>
-
-        <!-- Croix : mobile fixe -->
-        <button data-modal-close aria-label="Fermer"
-                class="md:hidden fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       flex items-center justify-center text-lg font-bold transition">✕</button>
-
-        <!-- Croix : desktop déportée -->
-        <button data-modal-close aria-label="Fermer"
-                class="hidden md:flex absolute -top-12 -right-12 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       items-center justify-center text-lg font-bold transition">✕</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal — Création du gabarit entreprise -->
-  <div id="bimGabaritModal" data-modal class="hidden fixed inset-0 z-[998]" role="dialog" aria-modal="true">
-    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
-
-    <!-- Wrapper centré -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-      <!-- Wrapper relatif pour ancrer la croix (desktop) -->
-      <div class="relative">
-        <!-- Carte -->
-        <div class="relative w-full max-w-5xl rounded-3xl ring-1 ring-white/10 shadow-2xl
-                    bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
-          <!-- Contenu scrollable -->
-          <div class="max-h-[85vh] overflow-y-auto overscroll-contain">
-            <div class="px-6 md:px-10 pt-8 pb-2">
-              <h4 class="text-3xl font-extrabold tracking-tight">Création du gabarit entreprise</h4>
-              <p class="mt-2 text-white/80 text-sm md:text-base leading-relaxed">
-                Conception du gabarit <span class="font-semibold text-white">BIOSS</span> :
-                standards graphiques, familles, cartouches et bibliothèques
-                pour une production homogène.
-              </p>
-            </div>
-
-            <div class="px-6 md:px-10 pb-8 grid md:grid-cols-2 gap-8">
-              <section>
-                <h5 class="font-semibold text-white mb-2">Contenu & structure</h5>
-                <ul class="list-disc list-inside space-y-1.5 text-sm text-white/80 leading-relaxed">
-                  <li>Paramétrage des styles, filtres, gabarits de vue</li>
-                  <li>Familles normalisées & nomenclatures types</li>
-                  <li>Cartouches & jeux de feuilles</li>
-                </ul>
-              </section>
-
-              <section>
-                <h5 class="font-semibold text-white mb-2">Bénéfices</h5>
-                <ul class="list-disc list-inside space-y-1.5 text-sm text-white/80 leading-relaxed">
-                  <li>Homogénéité graphique des livrables</li>
-                  <li>Gain de temps et réduction des erreurs</li>
-                  <li>Onboarding facilité des nouveaux collaborateurs</li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-
-        <!-- Croix : mobile fixe -->
-        <button data-modal-close aria-label="Fermer"
-                class="md:hidden fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       flex items-center justify-center text-lg font-bold transition">✕</button>
-
-        <!-- Croix : desktop déportée -->
-        <button data-modal-close aria-label="Fermer"
-                class="hidden md:flex absolute -top-12 -right-12 z-[1000] w-10 h-10 rounded-full
-                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                       items-center justify-center text-lg font-bold transition">✕</button>
-      </div>
-    </div>
-  </div>
-
   <!-- OVERLAY SLIDES — CoffraBIM (générique data-slider) -->
-  <div id="coffraOverlay" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
-    <!-- Backdrop -->
-    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
+<div id="coffraOverlay" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
-    <!-- Modal -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-      <div class="relative w-full max-w-7xl rounded-3xl ring-1 ring-white/10 shadow-2xl
-                  bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
-        <!-- Close -->
-        <button data-modal-close aria-label="Fermer"
-                class="fixed md:absolute top-3 right-3 md:-top-12 md:-right-12
-                       z-[1000] w-10 h-10 rounded-full
-                       bg-black/40 text-white ring-1 ring-white/30
-                       hover:bg-black/60 transition flex items-center justify-center">✕</button>
+  <!-- Modal -->
+  <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain mt-14 md:mt-0">
+    <div class="relative w-full max-w-7xl rounded-3xl ring-1 ring-white/10 shadow-2xl
+                bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
+      <!-- Close -->
+      <button data-modal-close aria-label="Fermer"
+              class="fixed md:absolute top-3 right-3 md:-top-12 md:-right-12
+                     z-[1000] w-10 h-10 rounded-full
+                     bg-black/40 text-white ring-1 ring-white/30
+                     hover:bg-black/60 transition flex items-center justify-center">✕</button>
 
-        <!-- Slider générique -->
-        <div data-slider data-slider-labels='[
-          "CoffraBIM - AutoPlan",
-          "CoffraBIM - AutoCoupe",
-          "CoffraBIM - AutoCote Plan",
-          "CoffraBIM - AutoCote Coupe",
-          "CoffraBIM - AutoNuméro",
-          "CoffraBIM - AutoÉtiquette Coupe",
-          "CoffraBIM - AutoCoffrage",
-          "CoffraBIM - AutoCarnet",
-          "CoffraBIM - ManuPlan",
-          "CoffraBIM - ManuCoupe",
-          "CoffraBIM - Multi-version Revit"
-        ]'>
-          <!-- Header -->
-          <div class="px-6 md:px-10 pt-8 pb-4">
-            <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="Outils"></h4>
-          </div>
+      <!-- Slider générique -->
+      <div data-slider data-slider-labels='[
+        "CoffraBIM - AutoPlan",
+        "CoffraBIM - AutoCoupe",
+        "CoffraBIM - AutoCote Plan",
+        "CoffraBIM - AutoCote Coupe",
+        "CoffraBIM - AutoNuméro",
+        "CoffraBIM - AutoÉtiquette Coupe",
+        "CoffraBIM - AutoCoffrage",
+        "CoffraBIM - AutoCarnet",
+        "CoffraBIM - ManuPlan",
+        "CoffraBIM - ManuCoupe",
+        "CoffraBIM - Multi-version Revit"
+      ]'>
+        <!-- Header -->
+        <div class="px-6 md:px-10 pt-8 pb-4">
+          <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="Outils"></h4>
+        </div>
 
-          <!-- Viewport -->
-          <div class="px-4 md:px-8 pb-10">
-            <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-              <div class="slider-track flex transition-transform duration-400 ease-out" style="transform: translateX(0);">
-                <!-- Slides x11 (contenu conservé) -->
+        <!-- Viewport -->
+        <div class="px-4 md:px-8 pb-10">
+          <div class="overflow-x-auto ios-scroll rounded-2xl ring-1 ring-white/10 bg-white/5 snap-x snap-mandatory">
+            <div class="slider-track flex transition-transform duration-400 ease-out touch-pan-x" style="transform: translateX(0);">
 
-                <!-- 1 - AutoPlan -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoPlan.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoPlan</h5>
-                      <p>Création rapide des vues de plans avec application des gabarits et structuration automatique.</p>
-                    </div>
+              <!-- 1 - AutoPlan -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoPlan.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoPlan</h5>
+                    <p>Création rapide des vues de plans avec application des gabarits et structuration automatique.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 2 - AutoCoupe -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoCoupe.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoCoupe</h5>
-                      <p>Création automatique de coupes sur les éléments du modèle, avec paramétrage avancé.</p>
-                    </div>
+              <!-- 2 - AutoCoupe -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoCoupe.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoCoupe</h5>
+                    <p>Création automatique de coupes sur les éléments du modèle, avec paramétrage avancé.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 3 - AutoCote Plan -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoCote_Plan.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoCote Plan</h5>
-                      <p>Cotation automatique sur les vues en plan.</p>
-                    </div>
+              <!-- 3 - AutoCote Plan -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoCote_Plan.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoCote Plan</h5>
+                    <p>Cotation automatique sur les vues en plan.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 4 - AutoCote Coupe -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoCote_Coupe.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoCote Coupe</h5>
-                      <p>Cotation automatique sur les vues en coupe.</p>
-                    </div>
+              <!-- 4 - AutoCote Coupe -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoCote_Coupe.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoCote Coupe</h5>
+                    <p>Cotation automatique sur les vues en coupe.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 5 - AutoNuméro -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoNumero.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoNuméro</h5>
-                      <p>Numérotation automatique des éléments selon plusieurs logiques définies.</p>
-                    </div>
+              <!-- 5 - AutoNuméro -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoNumero.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoNuméro</h5>
+                    <p>Numérotation automatique des éléments selon plusieurs logiques définies.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 6 - AutoÉtiquette Coupe -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoEtiquette_Coupe.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoÉtiquette Coupe</h5>
-                      <p>Étiquetage automatique des éléments dans les vues de coupe.</p>
-                    </div>
+              <!-- 6 - AutoÉtiquette Coupe -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoEtiquette_Coupe.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoÉtiquette Coupe</h5>
+                    <p>Étiquetage automatique des éléments dans les vues de coupe.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 7 - AutoCoffrage -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoCoffrage.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoCoffrage</h5>
-                      <p>Superposition automatique des vues de plans (fonds de plans et impacts) pour le coffrage.</p>
-                    </div>
+              <!-- 7 - AutoCoffrage -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoCoffrage.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoCoffrage</h5>
+                    <p>Superposition automatique des vues de plans (fonds de plans et impacts) pour le coffrage.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 8 - AutoCarnet -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_AutoCarnet.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">AutoCarnet</h5>
-                      <p>Placement automatique des coupes sur des feuilles pour générer un carnet de coupes organisé.</p>
-                    </div>
+              <!-- 8 - AutoCarnet -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_AutoCarnet.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">AutoCarnet</h5>
+                    <p>Placement automatique des coupes sur des feuilles pour générer un carnet de coupes organisé.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 9 - ManuPlan -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_ManuPlan.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">ManuPlan</h5>
-                      <p>Faciliter le placement des vues de plan sur des feuilles existantes ou à créer, sans navigation manuelle dans l’arborescence.</p>
-                    </div>
+              <!-- 9 - ManuPlan -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_ManuPlan.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">ManuPlan</h5>
+                    <p>Faciliter le placement des vues de plan sur des feuilles existantes ou à créer, sans navigation manuelle dans l’arborescence.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 10 - ManuCoupe -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_ManuCoupe.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">ManuCoupe</h5>
-                      <p>Faciliter le placement des coupes sur des feuilles existantes ou à créer, de manière automatisée.</p>
-                    </div>
+              <!-- 10 - ManuCoupe -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_ManuCoupe.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">ManuCoupe</h5>
+                    <p>Faciliter le placement des coupes sur des feuilles existantes ou à créer, de manière automatisée.</p>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- 11 - Multi-version Revit -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_Multi_Version.mp4" type="video/mp4">
-                    </video>
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">Multi-version Revit</h5>
-                      <p>CoffraBIM est disponible sur plusieurs versions de Revit (gestion du multi-versioning).</p>
-                    </div>
+              <!-- 11 - Multi-version Revit -->
+              <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                  <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+                    <source src="assets/video/coffraBIM_Multi_Version.mp4" type="video/mp4">
+                  </video>
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-xl font-bold mb-2">Multi-version Revit</h5>
+                    <p>CoffraBIM est disponible sur plusieurs versions de Revit (gestion du multi-versioning).</p>
                   </div>
-                </article>
-              </div>
+                </div>
+              </article>
+
             </div>
           </div>
-
-          <!-- Flèches (desktop) -->
-          <button class="slider-prev hidden md:flex absolute -left-20 top-1/2 -translate-y-1/2 z-50
-                         w-10 h-10 rounded-full bg-white/10 hover:bg-white/20
-                         ring-1 ring-white/30 transition flex items-center justify-center">←</button>
-          <button class="slider-next hidden md:flex absolute -right-20 top-1/2 -translate-y-1/2 z-50
-                         w-10 h-10 rounded-full bg-white/10 hover:bg-white/20
-                         ring-1 ring-white/30 transition flex items-center justify-center">→</button>
-
-          <!-- Points -->
-          <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
         </div>
+
+        <!-- Flèches (desktop) -->
+        <button class="slider-prev hidden md:flex absolute -left-20 top-1/2 -translate-y-1/2 z-50
+                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20
+                       ring-1 ring-white/30 transition flex items-center justify-center">←</button>
+        <button class="slider-next hidden md:flex absolute -right-20 top-1/2 -translate-y-1/2 z-50
+                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20
+                       ring-1 ring-white/30 transition flex items-center justify-center">→</button>
+
+        <!-- Points -->
+        <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- OVERLAY VIDÉO — Plateforme BIOSS -->
   <div id="biossVideo" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
@@ -566,7 +335,7 @@
                   <div class="grid md:grid-cols-2 gap-8 items-start">
                     <!-- Vidéo -->
                     <video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
-                      <source src="assets/video/coffraBIM_Plateforme_BIOSS.mp4" type="video/mp4">
+                      <source src="assets/video/coffraBIM_Plateforme_Bioss.mp4" type="video/mp4">
                     </video>
 
                     <!-- Texte -->
@@ -592,56 +361,69 @@
     <!-- Backdrop -->
     <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
-    <!-- Modal -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-      <div class="relative w-full max-w-7xl rounded-3xl ring-1 ring-white/10 shadow-2xl
-                  bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
-        <!-- Close -->
-        <button data-modal-close aria-label="Fermer"
-                class="fixed md:absolute top-3 right-3 md:-top-12 md:-right-12
-                       z-[1000] w-10 h-10 rounded-full
-                       bg-black/40 text-white ring-1 ring-white/30
-                       hover:bg-black/60 transition flex items-center justify-center">✕</button>
+    <!-- Wrapper centré -->
+    <div class="absolute inset-0 flex items-center justify-center p-3 md:p-6
+                overscroll-contain overflow-y-auto mt-12 md:mt-0">
 
-        <!-- Slider (1 slide) -->
-        <div data-slider data-slider-labels='["Cot-At-View — MVP"]'>
-          <!-- Titre dynamique -->
-          <div class="px-6 md:px-10 pt-8 pb-4">
-            <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="Cot-At-View"></h4>
+      <!-- Carte (NON scrollable, overflow visible -> croix desktop OK) -->
+      <div class="relative w-full max-w-[92vw] md:max-w-7xl
+                  max-h-[90vh] overflow-visible rounded-3xl ring-1 ring-white/10 shadow-2xl
+                  bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
+                  mt-10 md:mt-0">
+
+        <!-- Croix mobile -->
+        <button data-modal-close aria-label="Fermer"
+                class="md:hidden fixed top-6 right-6 z-[1001] w-10 h-10 rounded-full
+                      bg-black/40 text-white ring-1 ring-white/30 hover:bg-black/60
+                      transition flex items-center justify-center">✕</button>
+
+        <!-- Croix desktop -->
+        <button data-modal-close aria-label="Fermer"
+                class="hidden md:flex absolute -top-12 -right-12 z-[1001] w-10 h-10 rounded-full
+                      bg-black/40 text-white ring-1 ring-white/30 hover:bg-black/60
+                      transition items-center justify-center">✕</button>
+
+        <!-- Contenu SCROLLABLE -->
+        <div class="max-h-[90vh] overflow-y-auto">
+          
+          <!-- Header -->
+          <div class="px-4 md:px-10 pt-6 md:pt-8 pb-3 md:pb-4">
+            <h4 class="slider-title text-2xl md:text-3xl font-extrabold tracking-tight"
+                data-default="Cot-At-View"></h4>
           </div>
 
           <!-- Viewport -->
-          <div class="px-4 md:px-8 pb-10">
+          <div class="px-3 md:px-8 pb-8 md:pb-10">
             <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
               <div class="slider-track flex transition-transform duration-400 ease-out">
+                
                 <!-- Slide unique -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <!-- Vidéo (taille limitée) -->
-                    <div class="w-full max-w-[400px] md:max-w-[450px] mx-auto">
+                <article class="w-full shrink-0 p-4 md:p-10">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+                    
+                    <!-- Vidéo -->
+                    <div class="w-full max-w-full md:max-w-[450px] mx-auto">
                       <video controls
-                             class="block w-full max-h-[500px] rounded-2xl ring-1 ring-white/10 shadow-inner object-contain bg-black">
+                            class="block w-full h-auto max-h-[60vh] md:max-h-[500px] rounded-2xl
+                                    ring-1 ring-white/10 shadow-inner object-contain bg-black">
                         <source src="assets/video/video_mvp_CotAtView.mp4" type="video/mp4">
                       </video>
                     </div>
 
                     <!-- Texte -->
                     <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">Cot-At-View (MVP)</h5>
+                      <h5 class="text-lg md:text-xl font-bold mb-2">Cot-At-View (MVP)</h5>
                       <p>Application mobile pour consulter des plans PDF sur chantier, annoter/coter manuellement et gérer la documentation.</p>
                     </div>
+
                   </div>
                 </article>
               </div>
             </div>
           </div>
 
-          <!-- Flèches invisibles (init slider) -->
-          <button class="slider-prev opacity-0 pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full"></button>
-          <button class="slider-next opacity-0 pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full"></button>
-
           <!-- Points -->
-          <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
+          <div class="slider-dots pb-5 md:pb-6 flex items-center justify-center gap-2"></div>
         </div>
       </div>
     </div>
@@ -649,64 +431,75 @@
 
   <!-- OVERLAY IMAGE — Cot-At-View (MVP) -->
   <div id="cotatviewImage" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
-    <!-- Backdrop -->
-    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
-    <!-- Modal -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-      <div class="relative w-full max-w-7xl rounded-3xl ring-1 ring-white/10 shadow-2xl
-                  bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]">
-        <!-- Close -->
-        <button data-modal-close aria-label="Fermer"
-                class="fixed md:absolute top-3 right-3 md:-top-12 md:-right-12
-                       z-[1000] w-10 h-10 rounded-full
-                       bg-black/40 text-white ring-1 ring-white/30
-                       hover:bg-black/60 transition flex items-center justify-center">✕</button>
+  <!-- Wrapper centré -->
+  <div class="absolute inset-0 flex items-center justify-center p-3 md:p-6
+              overscroll-contain overflow-y-auto mt-12 md:mt-0">
 
-        <!-- Slider (1 slide pour le titre) -->
-        <div data-slider data-slider-labels='["Cot-At-View — Aperçu MVP"]'>
-          <!-- Titre dynamique -->
-          <div class="px-6 md:px-10 pt-8 pb-4">
-            <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="Cot-At-View"></h4>
-          </div>
+    <!-- Carte (NON scrollable, overflow visible -> croix desktop OK) -->
+    <div class="relative w-full max-w-[92vw] md:max-w-7xl
+                max-h-[90vh] overflow-visible rounded-3xl ring-1 ring-white/10 shadow-2xl
+                bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
+                mt-10 md:mt-0">
 
-          <!-- Viewport -->
-          <div class="px-4 md:px-8 pb-10">
-            <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-              <div class="slider-track flex transition-transform duration-400 ease-out">
-                <!-- Slide unique -->
-                <article class="w-full shrink-0 p-6 md:p-10">
-                  <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <!-- Image (taille limitée) -->
-                    <div class="w-full max-w-[560px] md:max-w-[640px] mx-auto">
-                      <img
-                        src="assets/image/mvp_CotAtView.png"
-                        alt="Cot-At-View MVP"
-                        class="block w-full aspect-[9/16] md:aspect-[10/16] max-h-[420px]
-                               rounded-2xl ring-1 ring-white/10 shadow-inner object-contain bg-black/20">
-                    </div>
+      <!-- Croix mobile -->
+      <button data-modal-close aria-label="Fermer"
+              class="md:hidden fixed top-6 right-6 z-[1001] w-10 h-10 rounded-full
+                     bg-black/40 text-white ring-1 ring-white/30 hover:bg-black/60
+                     transition flex items-center justify-center">✕</button>
 
-                    <!-- Texte -->
-                    <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                      <h5 class="text-xl font-bold mb-2">Prototype visuel</h5>
-                      <p>Aperçu visuel du MVP : écran de chargement illustrant l’identité graphique de l’application.</p>
-                    </div>
+      <!-- Croix desktop -->
+      <button data-modal-close aria-label="Fermer"
+              class="hidden md:flex absolute -top-12 -right-12 z-[1001] w-10 h-10 rounded-full
+                     bg-black/40 text-white ring-1 ring-white/30 hover:bg-black/60
+                     transition items-center justify-center">✕</button>
+
+      <!-- Contenu SCROLLABLE -->
+      <div class="max-h-[90vh] overflow-y-auto">
+
+        <!-- Header -->
+        <div class="px-4 md:px-10 pt-6 md:pt-8 pb-3 md:pb-4">
+          <h4 class="slider-title text-2xl md:text-3xl font-extrabold tracking-tight"
+              data-default="Cot-At-View"></h4>
+        </div>
+
+        <!-- Viewport -->
+        <div class="px-3 md:px-8 pb-8 md:pb-10">
+          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
+            <div class="slider-track flex transition-transform duration-400 ease-out">
+
+              <!-- Slide unique -->
+              <article class="w-full shrink-0 p-4 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+
+                  <!-- Image -->
+                  <div class="w-full max-w-full md:max-w-[640px] mx-auto">
+                    <img src="assets/image/mvp_CotAtView.png"
+                         alt="Cot-At-View MVP"
+                         class="block w-full aspect-[9/16] md:aspect-[10/16] max-h-[420px]
+                                rounded-2xl ring-1 ring-white/10 shadow-inner object-contain bg-black/20">
                   </div>
-                </article>
-              </div>
+
+                  <!-- Texte -->
+                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
+                    <h5 class="text-lg md:text-xl font-bold mb-2">Prototype visuel</h5>
+                    <p>Aperçu visuel du MVP : écran de chargement illustrant l’identité graphique de l’application.</p>
+                  </div>
+
+                </div>
+              </article>
             </div>
           </div>
-
-          <!-- Flèches invisibles (init slider) -->
-          <button class="slider-prev opacity-0 pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full"></button>
-          <button class="slider-next opacity-0 pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full"></button>
-
-          <!-- Points -->
-          <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
         </div>
+
+        <!-- Points -->
+        <div class="slider-dots pb-5 md:pb-6 flex items-center justify-center gap-2"></div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- FICHE DÉTAILLÉE — CoffraBIM -->
   <div id="coffraDetails" data-modal class="hidden fixed inset-0 z-[998]" role="dialog" aria-modal="true">
@@ -714,7 +507,7 @@
     <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
     <!-- Wrapper centré + scroll du viewport si besoin -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y">
+    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y mt-12 md:mt-0">
       <!-- Conteneur relatif (ancrage de la croix desktop) -->
       <div class="relative">
         <!-- Carte scrollable -->
@@ -801,7 +594,7 @@
     <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
     <!-- Wrapper centré -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y">
+    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y mt-12 md:mt-0">
       <!-- Conteneur relatif (croix desktop) -->
       <div class="relative">
         <!-- Carte scrollable -->
@@ -895,7 +688,7 @@
     <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
     <!-- Wrapper centré -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y">
+    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6 overflow-y-auto overscroll-contain touch-pan-y mt-12 md:mt-0">
       <!-- Conteneur relatif (croix desktop) -->
       <div class="relative">
         <!-- Carte scrollable -->
@@ -961,7 +754,7 @@
 
         <!-- Bouton fermer -->
         <button data-modal-close aria-label="Fermer"
-                class="md:hidden fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
+                class="md:hidden fixed top-6 right-5 z-[1000] w-10 h-10 rounded-full
                        ring-1 ring-white/20 bg-white/10 hover:bg-white/20
                        flex items-center justify-center text-lg font-bold transition">✕</button>
 
@@ -972,9 +765,9 @@
       </div>
     </div>
   </div>
+</section>
 
-  <style>
+<style>
     /* Inertie iOS pour les zones scrollables internes */
     .ios-scroll { -webkit-overflow-scrolling: touch; }
-  </style>
-</section>
+</style>

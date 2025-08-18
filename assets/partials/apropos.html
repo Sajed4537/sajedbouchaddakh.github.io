@@ -21,30 +21,6 @@
       </button>
     </article>
 
-    <!-- Tuile: SIG -->
-    <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 animate-fade-up">
-      <h3 class="text-xl font-semibold">Compétences (SIG)</h3>
-      <p class="mt-2 text-white/70 text-sm">Logiciels et rôles</p>
-      <button
-        data-modal-open="aproposSIG"
-        class="mt-4 inline-flex items-center justify-center rounded-xl px-4 py-2
-               bg-blue-600 hover:bg-blue-500 text-sm font-medium">
-        Plus de détails
-      </button>
-    </article>
-
-    <!-- Tuile: BIM / BTP -->
-    <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 animate-fade-up">
-      <h3 class="text-xl font-semibold">Compétences (BIM / BTP)</h3>
-      <p class="mt-2 text-white/70 text-sm">Logiciels et rôles</p>
-      <button
-        data-modal-open="aproposBIM"
-        class="mt-4 inline-flex items-center justify-center rounded-xl px-4 py-2
-               bg-blue-600 hover:bg-blue-500 text-sm font-medium">
-        Plus de détails
-      </button>
-    </article>
-
     <!-- Tuile: Langues -->
     <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 animate-fade-up">
       <h3 class="text-xl font-semibold">Langues</h3>
@@ -107,16 +83,21 @@
     <div class="relative w-full md:max-w-7xl max-h-[85vh] overflow-y-auto overflow-x-hidden ios-scroll
                 rounded-3xl ring-1 ring-white/10 shadow-2xl
                 bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
+                [scrollbar-gutter:stable] mt-10 md:mt-0">
 
       <!-- Slider -->
       <div data-slider class="relative"
            data-slider-labels='["Langages Informatiques","Frameworks & bibliothèques","Bases de données","Outils","Types de développement","Cloud","API & extensions"]'>
 
         <!-- Header -->
-        <div class="px-5 md:px-10 pt-8 pb-4">
+        <div class="px-5 md:px-10 pt-8">
           <h4 class="slider-title text-3xl font-extrabold tracking-tight"
               data-default="Compétences — Informatique"></h4>
+        </div>
+
+        <!-- Dots en haut -->
+        <div class="px-5 md:px-10 pt-2 pb-3">
+          <div class="slider-dots flex items-center justify-center gap-2"></div>
         </div>
 
         <!-- Viewport -->
@@ -127,7 +108,6 @@
               <!-- Slide 1 — Langages -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
                     <div class="grid grid-cols-3 gap-x-8 gap-y-10 md:gap-x-20 md:gap-y-16 p-4 md:p-8">
@@ -139,7 +119,6 @@
                       <img src="assets/image/xaml.png"       alt="XAML"       class="w-16 h-16 md:w-20 md:h-20 object-contain">
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 leading-relaxed text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Langages Informatiques</h5>
@@ -147,14 +126,12 @@
                       <li>C#</li><li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>XAML</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 2 — Frameworks -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
                     <div class="grid grid-cols-3 gap-x-8 gap-y-10 md:gap-x-20 md:gap-y-16 p-4 md:p-8">
@@ -166,7 +143,6 @@
                       <img src="assets/image/entity.png"         alt="Entity Framework"  class="w-16 h-16 md:w-20 md:h-20 object-contain">
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Frameworks & bibliothèques</h5>
@@ -175,14 +151,12 @@
                       <li>Razor Pages</li><li>Windows Forms</li><li>Entity Framework</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 3 — Bases de données -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
                     <div class="grid grid-cols-2 gap-x-12 gap-y-10 md:gap-x-24 md:gap-y-16 p-4 md:p-8">
@@ -194,7 +168,6 @@
                       </div>
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Bases de données</h5>
@@ -202,29 +175,30 @@
                       <li>SQLite</li><li>SQL Server</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 4 — Outils -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-3 gap-x-8 gap-y-10 md:gap-x-12 md:gap-y-12 p-4 md:p-8">
+                    <div class="grid grid-cols-2 gap-6 md:gap-10 p-4 md:p-8 place-items-center">
+                      <!-- Ligne du haut -->
                       <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/visual_studio.png" alt="Visual Studio" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                        <img src="assets/image/visual_studio.png" alt="Visual Studio" class="w-20 h-20 md:w-24 md:h-24 object-contain">
                       </div>
                       <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/vscode.png" alt="Visual Studio Code" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                        <img src="assets/image/vscode.png" alt="Visual Studio Code" class="w-20 h-20 md:w-24 md:h-24 object-contain">
                       </div>
-                      <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/inno_setup.png" alt="Inno Setup" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                      <!-- Ligne du bas (centrée) -->
+                      <div class="col-span-2 flex justify-center">
+                        <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
+                          <img src="assets/image/inno_setup.png" alt="Inno Setup" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                        </div>
                       </div>
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Outils</h5>
@@ -232,29 +206,30 @@
                       <li>Visual Studio</li><li>Visual Studio Code</li><li>Inno Setup</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 5 — Types de développement -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-3 gap-x-8 gap-y-10 md:gap-x-12 md:gap-y-12 p-4 md:p-8">
+                    <div class="grid grid-cols-2 gap-6 md:gap-10 p-4 md:p-8 place-items-center">
+                      <!-- Ligne du haut -->
                       <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/web.png" alt="Web" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                        <img src="assets/image/web.png" alt="Web" class="w-20 h-20 md:w-24 md:h-24 object-contain">
                       </div>
                       <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/desktop.png" alt="Desktop (.exe)" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                        <img src="assets/image/desktop.png" alt="Desktop (.exe)" class="w-20 h-20 md:w-24 md:h-24 object-contain">
                       </div>
-                      <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
-                        <img src="assets/image/mobile.png" alt="Mobile" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                      <!-- Ligne du bas (centrée) -->
+                      <div class="col-span-2 flex justify-center">
+                        <div class="bg-white p-4 md:p-6 rounded-xl flex items-center justify-center">
+                          <img src="assets/image/mobile.png" alt="Mobile" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                        </div>
                       </div>
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Types de développement</h5>
@@ -262,21 +237,18 @@
                       <li>Web</li><li>Desktop (.exe)</li><li>Mobile</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 6 — Cloud -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logo -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
                     <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
                       <img src="assets/image/azure.png" alt="Azure" class="w-24 h-24 md:w-28 md:h-28 object-contain">
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">Cloud</h5>
@@ -284,14 +256,12 @@
                       <li>Azure</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
               <!-- Slide 7 — API & extensions -->
               <article class="w-full shrink-0 p-5 md:p-10">
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-
                   <!-- Logos -->
                   <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
                     <div class="grid grid-cols-2 gap-x-12 gap-y-10 md:gap-x-24 md:gap-y-16 p-4 md:p-8">
@@ -303,7 +273,6 @@
                       </div>
                     </div>
                   </div>
-
                   <!-- Texte -->
                   <div class="text-white/85 text-base md:text-lg">
                     <h5 class="text-xl font-bold mb-3">API & extensions</h5>
@@ -312,7 +281,6 @@
                       <li>pyRevit</li>
                     </ul>
                   </div>
-
                 </div>
               </article>
 
@@ -329,267 +297,11 @@
                        w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
                        items-center justify-center text-white select-none">→</button>
 
-        <!-- Dots -->
-        <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
-
       </div>
     </div>
   </div>
 </div>
 <!-- ==================== /OVERLAY — À propos / Informatique ==================== -->
-
-
-
-<!-- ==================== OVERLAY — SIG ==================== -->
-<div id="aproposSIG" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
-
-  <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
-
-  <!-- Close (fixe, hors carte) -->
-  <button data-modal-close aria-label="Fermer"
-          class="fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
-                 ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                 flex items-center justify-center font-bold">✕</button>
-
-  <!-- Wrapper centré + scroll -->
-  <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6
-              overflow-y-auto overscroll-contain touch-pan-y">
-
-    <!-- Carte scrollable -->
-    <div class="relative w-full md:max-w-7xl max-h-[85vh] overflow-y-auto ios-scroll
-                rounded-3xl ring-1 ring-white/10 shadow-2xl
-                bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
-
-      <!-- Slider -->
-      <div data-slider class="relative" data-slider-labels='["Logiciels","Rôles"]'>
-
-        <!-- Header -->
-        <div class="px-6 md:px-10 pt-8 pb-4">
-          <h4 class="slider-title text-3xl font-extrabold"
-              data-default="Compétences — SIG"></h4>
-        </div>
-
-        <!-- Viewport -->
-        <div class="px-4 md:px-8 pb-10">
-          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-            <div class="slider-track flex transition-transform duration-500 ease-out will-change-transform touch-pan-x">
-
-              <!-- Slide 1 — Logiciels (2 en haut, 1 centré en bas) -->
-              <article class="w-full shrink-0 p-6 md:p-10">
-                <div class="grid md:grid-cols-2 gap-8 items-start">
-
-                  <!-- Grille logos -->
-                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-2 grid-rows-2 gap-6 md:gap-8 p-6 md:p-8 w-full max-w-[560px] place-items-center">
-                      <div class="w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl ring-1 ring-black/10 shadow-lg flex items-center justify-center">
-                        <img src="assets/image/arcgis_pro.png" alt="ArcGIS Pro" class="max-w-[70%] max-h-[70%] object-contain block">
-                      </div>
-                      <div class="w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl ring-1 ring-black/10 shadow-lg flex items-center justify-center">
-                        <img src="assets/image/arcgis_online.png" alt="ArcGIS Online" class="max-w-[70%] max-h-[70%] object-contain block">
-                      </div>
-                      <div class="col-span-2 justify-self-center">
-                        <div class="w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl ring-1 ring-black/10 shadow-lg flex items-center justify-center">
-                          <img src="assets/image/qgis.png" alt="QGIS" class="max-w-[70%] max-h-[70%] object-contain block">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Texte -->
-                  <div class="text-white/85 text-base md:text-lg">
-                    <h5 class="text-xl font-bold mb-3">Logiciels</h5>
-                    <ul class="list-disc list-inside space-y-2">
-                      <li>ArcGIS Pro</li>
-                      <li>ArcGIS Online</li>
-                      <li>QGIS</li>
-                    </ul>
-                  </div>
-
-                </div>
-              </article>
-
-              <!-- Slide 2 — Rôles -->
-              <article class="w-full shrink-0 p-6 md:p-10">
-                <div class="grid md:grid-cols-2 gap-8 items-start">
-
-                  <!-- Images -->
-                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-2 gap-8 w-full h-full p-4">
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/carto.jpg" alt="Création de cartes" class="w-full h-full object-cover">
-                      </div>
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/stat.jpg" alt="Analyses statistiques" class="w-full h-full object-cover">
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Texte -->
-                  <div class="text-white/85 text-base md:text-lg">
-                    <h5 class="text-xl font-bold mb-3">Rôles</h5>
-                    <ul class="list-disc list-inside space-y-2">
-                      <li>Création de cartes</li>
-                      <li>Analyses statistiques</li>
-                    </ul>
-                  </div>
-
-                </div>
-              </article>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Flèches & Dots -->
-        <button class="slider-prev hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-[1000]
-                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">←</button>
-
-        <button class="slider-next hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[1000]
-                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">→</button>
-
-        <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
-
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ==================== /OVERLAY — SIG ==================== -->
-
-
-
-<!-- ==================== OVERLAY — BIM-BTP ==================== -->
-<div id="aproposBIM" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
-
-  <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
-
-  <!-- Close -->
-  <button data-modal-close aria-label="Fermer"
-          class="fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
-                 ring-1 ring-white/20 bg-white/10 hover:bg-white/20
-                 flex items-center justify-center text-lg font-bold transition">✕</button>
-
-  <!-- Wrapper -->
-  <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6
-              overflow-y-auto overscroll-contain touch-pan-y">
-
-    <!-- Carte -->
-    <div class="relative w-full md:max-w-7xl max-h-[85vh] overflow-y-auto ios-scroll
-                rounded-3xl ring-1 ring-white/10 shadow-2xl
-                bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
-
-      <!-- Slider -->
-      <div data-slider class="relative" data-slider-labels='["Logiciels","Rôles"]'>
-
-        <!-- Header -->
-        <div class="px-6 md:px-10 pt-8 pb-4">
-          <h4 class="slider-title text-3xl font-extrabold tracking-tight"
-              data-default="Compétences — BIM / BTP"></h4>
-        </div>
-
-        <!-- Viewport -->
-        <div class="px-4 md:px-8 pb-10">
-          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-            <div class="slider-track flex transition-transform duration-400 ease-out will-change-transform touch-pan-x">
-
-              <!-- Slide 1 — Logiciels -->
-              <article class="w-full shrink-0 p-6 md:p-10">
-                <div class="grid md:grid-cols-2 gap-8 items-start">
-
-                  <!-- Logos -->
-                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-2 gap-x-12 gap-y-12 p-8">
-                      <div class="w-28 h-28 md:w-32 md:h-32 flex items-center justify-center">
-                        <img src="assets/image/revit.png" alt="Revit" class="max-w-[85%] max-h-[85%] object-contain block">
-                      </div>
-                      <div class="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                        <img src="assets/image/dynamo.png" alt="Dynamo" class="max-w-[85%] max-h-[85%] object-contain block">
-                      </div>
-                      <div class="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                        <img src="assets/image/autocad.png" alt="AutoCAD" class="max-w-[85%] max-h-[85%] object-contain block">
-                      </div>
-                      <div class="w-28 h-28 md:w-32 md:h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                        <img src="assets/image/navisworks.png" alt="Navisworks" class="max-w-[85%] max-h-[85%] object-contain block">
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Texte -->
-                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                    <h5 class="text-xl font-bold mb-3">Logiciels</h5>
-                    <ul class="list-disc list-inside space-y-2">
-                      <li>Revit</li>
-                      <li>Dynamo</li>
-                      <li>AutoCAD</li>
-                      <li>Navisworks</li>
-                    </ul>
-                  </div>
-
-                </div>
-              </article>
-
-              <!-- Slide 2 — Rôles -->
-              <article class="w-full shrink-0 p-6 md:p-10">
-                <div class="grid md:grid-cols-2 gap-8 items-start">
-
-                  <!-- Images -->
-                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-                    <div class="grid grid-cols-2 gap-6 w-full h-full p-6">
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/mode_3D.jpg" alt="Modélisation 3D" class="w-full h-full object-cover">
-                      </div>
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/coffrage.jpg" alt="Coffrage béton armé" class="w-full h-full object-cover">
-                      </div>
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/coordination_bim.jpg" alt="Coordination BIM" class="w-full h-full object-cover">
-                      </div>
-                      <div class="rounded-xl overflow-hidden">
-                        <img src="assets/image/bim.jpg" alt="BIM global" class="w-full h-full object-cover">
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Texte -->
-                  <div class="text-white/85 leading-relaxed text-base md:text-lg">
-                    <h5 class="text-xl font-bold mb-3">Rôles</h5>
-                    <ul class="list-disc list-inside space-y-2">
-                      <li>Modélisation 3D (coffrage béton armé)</li>
-                      <li>Coordination BIM</li>
-                      <li>Création de gabarit logiciel</li>
-                      <li>Extraction de plans & coupes (coffrage EXE)</li>
-                    </ul>
-                  </div>
-
-                </div>
-              </article>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Flèches & Dots -->
-        <button class="slider-prev hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-[1000]
-                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">←</button>
-
-        <button class="slider-next hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[1000]
-                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">→</button>
-
-        <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
-
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ==================== /OVERLAY — BIM-BTP ==================== -->
-
 
 
 <!-- ==================== OVERLAY — Langues ==================== -->
@@ -612,7 +324,7 @@
     <div class="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto ios-scroll
                 rounded-3xl ring-1 ring-white/10 shadow-2xl
                 bg-[radial-gradient(1100px_700px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
+                [scrollbar-gutter:stable] mt-10 md:mt-0">
 
       <div>
         <!-- Header -->
@@ -653,7 +365,6 @@
 <!-- ==================== /OVERLAY — Langues ==================== -->
 
 
-
 <!-- ==================== OVERLAY — Soft skills ==================== -->
 <div id="aproposSoft" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
 
@@ -674,7 +385,7 @@
     <div class="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto ios-scroll
                 rounded-3xl ring-1 ring-white/10 shadow-2xl
                 bg-[radial-gradient(1100px_700px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
+                [scrollbar-gutter:stable] mt-10 md:mt-0">
 
       <div>
         <!-- Header -->
@@ -695,7 +406,7 @@
 
                 <!-- Texte -->
                 <div class="text-white/85 text-lg">
-                  <h5 class="text-xl font-bold mb-3">Softs skills</h5>
+                  <h5 class="text-xl font-bold mb-3">Soft skills</h5>
                   <ul class="list-disc list-inside space-y-2">
                     <li>Analyse & résolution de problèmes</li>
                     <li>Autonomie & responsabilités</li>
@@ -716,15 +427,13 @@
 </div>
 <!-- ==================== /OVERLAY — Soft skills ==================== -->
 
-
-
 <!-- ==================== OVERLAY — Hobbies ==================== -->
 <div id="aproposHobbies" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
 
   <!-- Backdrop -->
   <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
 
-  <!-- Close (fixe) -->
+  <!-- Close (fixe, hors carte) -->
   <button data-modal-close aria-label="Fermer"
           class="fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
                  ring-1 ring-white/20 bg-white/10 hover:bg-white/20
@@ -738,14 +447,19 @@
     <div class="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto ios-scroll
                 rounded-3xl ring-1 ring-white/10 shadow-2xl
                 bg-[radial-gradient(1100px_700px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
-                [scrollbar-gutter:stable]">
+                [scrollbar-gutter:stable] mt-10 md:mt-0">
 
       <!-- Slider -->
       <div data-slider data-slider-labels='["Sport","Jeux vidéo","Code & programmation","Lecture"]' class="relative">
 
         <!-- Header -->
-        <div class="px-6 md:px-10 pt-8 pb-4">
+        <div class="px-6 md:px-10 pt-8">
           <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="Hobbies"></h4>
+        </div>
+
+        <!-- Dots (placés en haut sous le titre) -->
+        <div class="px-6 md:px-10 pt-2 pb-3">
+          <div class="slider-dots flex items-center justify-center gap-2"></div>
         </div>
 
         <!-- Viewport -->
@@ -836,16 +550,14 @@
           </div>
         </div>
 
-        <!-- Flèches & Dots -->
-        <button class="slider-prev hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-[1000]
+        <!-- Flèches navigation -->
+        <button class="slider-prev hidden md:flex fixed left-7 top-1/2 -translate-y-1/2 z-[1000]
                        w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">←</button>
+                       items-center justify-center text-white select-none">←</button>
 
-        <button class="slider-next hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[1000]
+        <button class="slider-next hidden md:flex fixed right-7 top-1/2 -translate-y-1/2 z-[1000]
                        w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
-                       flex items-center justify-center">→</button>
-
-        <div class="slider-dots pb-6 flex items-center justify-center gap-2"></div>
+                       items-center justify-center text-white select-none">→</button>
 
       </div>
     </div>

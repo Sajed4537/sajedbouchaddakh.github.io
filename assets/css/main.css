@@ -30,3 +30,11 @@
   transform: none !important;
   transition: none !important;
 }
+
+/* Inertie iOS + masquage des scrollbars pour tout conteneur à défilement interne */
+  .ios-scroll {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE/Edge */
+  }
+  .ios-scroll::-webkit-scrollbar { display: none; } /* Safari/Chrome iOS */
