@@ -21,6 +21,20 @@
       </button>
     </article>
 
+    <!-- Tuile: BTP/BIM -->
+    <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 animate-fade-up">
+      <h3 class="text-xl font-semibold">Compétences (BTP/BIM)</h3>
+      <p class="mt-2 text-white/70 text-sm">
+        Logiciels BIM/SIG
+      </p>
+      <button
+        data-modal-open="aproposBimBtp"
+        class="mt-4 inline-flex items-center justify-center rounded-xl px-4 py-2
+               bg-blue-600 hover:bg-blue-500 text-sm font-medium">
+        Plus de détails
+      </button>
+    </article>
+
     <!-- Tuile: Langues -->
     <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 animate-fade-up">
       <h3 class="text-xl font-semibold">Langues</h3>
@@ -60,6 +74,148 @@
 </section>
 <!-- =================== /À PROPOS (tuiles) =================== -->
 
+<!-- ==================== OVERLAY — À propos / BIM & BTP ==================== -->
+<div id="aproposBimBtp" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
+
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
+
+  <!-- Close (fixe, hors carte) -->
+  <button data-modal-close aria-label="Fermer"
+          class="fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
+                 ring-1 ring-white/20 bg-white/10 hover:bg-white/20
+                 flex items-center justify-center text-lg font-bold transition">✕</button>
+
+  <!-- Wrapper centré + scroll du viewport si besoin -->
+  <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6
+              overflow-y-auto overscroll-contain touch-pan-y">
+
+    <!-- Carte (scrollable si contenu long) -->
+    <div class="relative w-full md:max-w-7xl max-h-[85vh] overflow-y-auto overflow-x-hidden ios-scroll
+                rounded-3xl ring-1 ring-white/10 shadow-2xl
+                bg-[radial-gradient(1200px_800px_at_80%_0%,#2a67ff14_0%,#0b1b2e_45%,#03070c_100%)]
+                [scrollbar-gutter:stable] mt-10 md:mt-0">
+
+      <!-- Slider -->
+      <div data-slider class="relative"
+           data-slider-labels='["Logiciels BIM & CAO","Logiciels SIG"]'>
+
+        <!-- Header -->
+        <div class="px-5 md:px-10 pt-8">
+          <h4 class="slider-title text-3xl font-extrabold tracking-tight"
+              data-default="Compétences — BIM & BTP"></h4>
+        </div>
+
+        <!-- Dots en haut -->
+        <div class="px-5 md:px-10 pt-2 pb-3">
+          <div class="slider-dots flex items-center justify-center gap-2"></div>
+        </div>
+
+        <!-- Viewport -->
+        <div class="px-4 md:px-8 pb-10">
+          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
+            <div class="slider-track flex transition-transform duration-400 ease-out will-change-transform touch-pan-x">
+
+              <!-- Slide 1 — Logiciels BIM & CAO -->
+              <article class="w-full shrink-0 p-5 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+
+                  <!-- Logos -->
+                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
+                    <div class="grid grid-cols-3 gap-x-10 gap-y-10 md:gap-x-14 md:gap-y-14 p-4 md:p-8 place-items-center">
+                      
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/revit.png" alt="Revit" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/dynamo.png" alt="Dynamo" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/autocad.png" alt="AutoCAD" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/navisworks.png" alt="Navisworks" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center col-span-3 md:col-span-1">
+                        <img src="assets/image/acc.png" alt="Autodesk Construction Cloud" class="w-24 h-24 md:w-28 md:h-28 object-contain">
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Texte -->
+                  <div class="text-white/85 text-base md:text-lg leading-relaxed">
+                    <h5 class="text-xl font-bold mb-3">Logiciels BIM & CAO</h5>
+                    <p class="mb-3">Maîtrise des outils de modélisation, coordination et production BIM :</p>
+                    <ul class="list-disc list-inside space-y-2">
+                      <li><span class="font-semibold">Revit :</span> Modélisation structurelle, création de gabarits et extraction documentaire</li>
+                      <li><span class="font-semibold">Dynamo :</span> Automatisation de tâches et scripts de paramétrage</li>
+                      <li><span class="font-semibold">AutoCAD :</span> Production de détails techniques et mise en plan 2D</li>
+                      <li><span class="font-semibold">Navisworks :</span> Coordination interdisciplinaire et détection de conflits</li>
+                      <li><span class="font-semibold">Autodesk Construction Cloud (ACC) :</span> Gestion documentaire collaborative</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 — Logiciels SIG -->
+              <article class="w-full shrink-0 p-5 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+
+                  <!-- Logos -->
+                  <div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
+                    <div class="grid grid-cols-3 gap-x-10 gap-y-10 md:gap-x-16 md:gap-y-16 p-4 md:p-8 place-items-center">
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/arcgis_pro.png" alt="ArcGIS Pro" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/arcgis_online.png" alt="ArcGIS Online" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                      <div class="bg-white p-5 md:p-6 rounded-xl flex items-center justify-center">
+                        <img src="assets/image/qgis.png" alt="QGIS" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Texte -->
+                  <div class="text-white/85 text-base md:text-lg leading-relaxed">
+                    <h5 class="text-xl font-bold mb-3">Logiciels SIG</h5>
+                    <p class="mb-3">Compétences dans la gestion et l’analyse de données géospatiales appliquées aux projets techniques :</p>
+                    <ul class="list-disc list-inside space-y-2">
+                      <li><span class="font-semibold">ArcGIS Pro :</span> Analyse spatiale, création de cartes et gestion de couches de données</li>
+                      <li><span class="font-semibold">ArcGIS Online :</span> Publication et partage de données géographiques en ligne</li>
+                      <li><span class="font-semibold">QGIS :</span> Traitement et exploitation de données topographiques</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Flèches navigation -->
+        <button class="slider-prev hidden md:flex fixed left-7 top-1/2 -translate-y-1/2 z-[1000]
+                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
+                       items-center justify-center text-white select-none">←</button>
+
+        <button class="slider-next hidden md:flex fixed right-7 top-1/2 -translate-y-1/2 z-[1000]
+                       w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 ring-1 ring-white/30
+                       items-center justify-center text-white select-none">→</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ==================== /OVERLAY — À propos / BIM & BTP ==================== -->
 
 
 
