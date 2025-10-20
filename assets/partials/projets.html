@@ -146,6 +146,7 @@
             "M2 - Collections & LINQ",
             "M3 - SOLID & Patterns",
             "M4 - ASP.NET Core MVC",
+            "M4.5 - Fondamentaux SQL",
             "M5 - SQL & EF Core",
             "M6 - Auth & Sécurité",
             "M7 - API REST, Swagger & JWT",
@@ -305,7 +306,49 @@
                   </div>
                 </article>
 
-                <!--Slides 4 → 10 : WIP centrés -->
+                <!-- ===== Slides 5 : M4.5 ===== -->
+                <article class="w-full shrink-0 snap-start p-6 md:p-10">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                    <!-- Liste objectifs -->
+                    <div class="md:self-center">
+                      <ul class="text-white/85 text-base md:text-lg list-disc list-inside space-y-1.5">
+                        <li><strong>SQL Server Fundamentals</strong> : création et gestion de bases de données</li>
+                        <li><strong>Modélisation relationnelle</strong> : relations 1→N entre <code>Authors</code>, <code>Books</code> et <code>Loans</code></li>
+                        <li><strong>Langage SQL</strong> : <code>SELECT</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, agrégations</li>
+                        <li><strong>CRUD complet</strong> : insertion, lecture, mise à jour et suppression avec logique métier</li>
+                        <li><strong>Clés étrangères</strong> & contraintes : intégrité référentielle et dépendances</li>
+                        <li><strong>Indexation</strong> : création d’un index non-clustered pour optimiser les recherches</li>
+                        <li><strong>Plans d’exécution</strong> : analyse du passage de <em>Clustered Scan</em> à <em>Index Seek</em></li>
+                      </ul>
+                    </div>
+
+                    <!-- Exercices + Projet -->
+                    <div class="text-white/85 text-sm md:text-base md:self-center">
+                      <h6 class="font-semibold mb-2">Exercices</h6>
+                      <ul class="list-disc list-inside space-y-1.5">
+                        <li><a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/exercises/ex01-db-structure-basics">ex01 - DB Structure Basics</a></li>
+                        <li><a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/exercises/ex02-create-tables">ex02 - Create Tables</a></li>
+                        <li><a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/exercises/ex03-crud-operations">ex03 - CRUD Operations</a></li>
+                        <li><a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/exercises/ex04-joins-and-relations">ex04 - Joins & Relations</a></li>
+                        <li><a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/exercises/ex05-indexes-and-optimization">ex05 - Indexes & Optimization</a></li>
+                      </ul>
+
+                      <h6 class="font-semibold mt-4 mb-2">Projet</h6>
+                      <p>
+                        <a class="underline hover:no-underline" target="_blank" href="https://github.com/Sajed4537/fullstack-csharp-modules/tree/main/modules/04.5-sql-fundamentals/project">
+                          Projet « Library Management System »
+                        </a>
+                        <span class="text-white/60"> — création d’une base complète de gestion de bibliothèque avec schéma relationnel, opérations CRUD, indexation et optimisation des performances dans SQL Server Management Studio (SSMS).</span>
+                      </p>
+                    </div>
+
+                  </div>
+                </article>
+
+
+
+                <!--Slides 6 → 10 : WIP centrés -->
                 <article class="w-full shrink-0 snap-start p-6 md:p-10">
                   <div class="w-full flex items-center justify-center min-h-[22rem]">
                     <div class="mx-auto max-w-xl text-center rounded-2xl ring-1 ring-white/15 bg-white/[.06] p-6">
