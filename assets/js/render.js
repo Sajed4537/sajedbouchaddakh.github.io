@@ -74,17 +74,47 @@ window.Render = (() => {
   }
 
   /* ── Logo grid ────────────────────────────────────── */
+  function logoItem(l) {
+    return l.bg
+      ? `<div class="bg-white p-4 md:p-5 rounded-xl flex items-center justify-center">
+           <img src="${l.src}" alt="${l.alt}" class="w-16 h-16 md:w-20 md:h-20 object-contain">
+         </div>`
+      : `<img src="${l.src}" alt="${l.alt}" class="w-16 h-16 md:w-20 md:h-20 object-contain">`;
+  }
+
   function logoGrid(logos) {
-    const cols = logos.length <= 2 ? 'grid-cols-2' : logos.length <= 4 ? 'grid-cols-2' : 'grid-cols-3';
-    const items = logos.map(l =>
-      l.bg
-        ? `<div class="bg-white p-4 md:p-5 rounded-xl flex items-center justify-center">
-             <img src="${l.src}" alt="${l.alt}" class="w-16 h-16 md:w-20 md:h-20 object-contain">
-           </div>`
-        : `<img src="${l.src}" alt="${l.alt}" class="w-16 h-16 md:w-20 md:h-20 object-contain">`
-    ).join('');
-    return `<div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex items-center justify-center">
-      <div class="grid ${cols} gap-6 md:gap-10 p-4 md:p-8 place-items-center">${items}</div>
+    const n = logos.length;
+    let inner;
+
+    if (n === 1) {
+      inner = `<div class="flex items-center justify-center">${logoItem(logos[0])}</div>`;
+    } else if (n === 2) {
+      inner = `<div class="grid grid-cols-2 gap-8 md:gap-14 place-items-center">
+        ${logos.map(logoItem).join('')}
+      </div>`;
+    } else if (n === 3) {
+      inner = `<div class="grid grid-cols-3 gap-4 md:gap-8 place-items-center">
+        ${logos.map(logoItem).join('')}
+      </div>`;
+    } else if (n === 4) {
+      inner = `<div class="grid grid-cols-2 gap-6 md:gap-10 place-items-center">
+        ${logos.map(logoItem).join('')}
+      </div>`;
+    } else if (n === 5) {
+      inner = `<div class="grid grid-cols-3 gap-4 md:gap-8 place-items-center">
+        ${logos.slice(0, 3).map(logoItem).join('')}
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:gap-8 place-items-center mt-4 md:mt-6 px-6 md:px-16">
+        ${logos.slice(3).map(logoItem).join('')}
+      </div>`;
+    } else {
+      inner = `<div class="grid grid-cols-3 gap-4 md:gap-8 place-items-center">
+        ${logos.map(logoItem).join('')}
+      </div>`;
+    }
+
+    return `<div class="aspect-[16/10] rounded-2xl ring-1 ring-white/10 bg-gradient-to-br from-blue-900/40 to-black/20 flex flex-col items-center justify-center p-4 md:p-8">
+      ${inner}
     </div>`;
   }
 

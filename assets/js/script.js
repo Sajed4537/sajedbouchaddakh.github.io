@@ -120,14 +120,20 @@ class Slider {
       if (i != null) this.set(Number(i));
     });
 
-    // Swipe mobile
-    let startX = 0, dx = 0;
+    // Swipe mobile — ignoré si le touch démarre sur une vidéo
+    let startX = null, dx = 0;
     this.track.style.touchAction = 'pan-y';
-    this.track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; dx = 0; }, { passive: true });
-    this.track.addEventListener('touchmove',  (e) => { dx = e.touches[0].clientX - startX; }, { passive: true });
-    this.track.addEventListener('touchend',   () => {
-      if (Math.abs(dx) > 50) { dx < 0 ? this.nextSlide() : this.prevSlide(); }
-      dx = 0;
+    this.track.addEventListener('touchstart', (e) => {
+      if (e.target.closest('video')) { startX = null; return; }
+      startX = e.touches[0].clientX; dx = 0;
+    }, { passive: true });
+    this.track.addEventListener('touchmove', (e) => {
+      if (startX === null) return;
+      dx = e.touches[0].clientX - startX;
+    }, { passive: true });
+    this.track.addEventListener('touchend', () => {
+      if (startX !== null && Math.abs(dx) > 50) { dx < 0 ? this.nextSlide() : this.prevSlide(); }
+      dx = 0; startX = null;
     }, { passive: true });
 
     // Clavier si modal ouverte
