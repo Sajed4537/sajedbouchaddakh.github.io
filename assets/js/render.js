@@ -224,8 +224,8 @@ window.Render = (() => {
           <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="${defaultTitle}"></h4>
         </div>
         <div class="px-4 md:px-8 pb-10">
-          <div class="overflow-x-auto ios-scroll rounded-2xl ring-1 ring-white/10 bg-white/5 snap-x snap-mandatory">
-            <div class="slider-track flex transition-transform duration-400 ease-out touch-pan-x" style="transform:translateX(0)">
+          <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
+            <div class="slider-track flex transition-transform duration-400 ease-out" style="transform:translateX(0)">
               ${slidesHtml}
             </div>
           </div>

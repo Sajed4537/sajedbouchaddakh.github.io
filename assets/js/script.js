@@ -77,7 +77,12 @@ class Slider {
 
   makeDots() {
     if (!this.dots) { this.dotNodes = []; return; }
-    if (this.count <= 1) { this.dots.innerHTML = ''; this.dots.style.display = 'none'; this.dotNodes = []; return; }
+    if (this.count <= 1) {
+      this.dots.innerHTML = ''; this.dots.style.display = 'none'; this.dotNodes = [];
+      if (this.prev) this.prev.style.display = 'none';
+      if (this.next) this.next.style.display = 'none';
+      return;
+    }
     this.dots.style.display = '';
     this.dots.innerHTML = '';
     for (let i = 0; i < this.count; i++) {
@@ -137,6 +142,8 @@ class Slider {
 
   static initAll() { $$('[data-slider]').forEach(root => new Slider(root)); }
 }
+
+window.Slider = Slider;
 
 /* ------------------------------
    Animation "fade-up"
