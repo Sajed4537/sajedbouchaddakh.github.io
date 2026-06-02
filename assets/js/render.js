@@ -154,11 +154,11 @@ window.Render = (() => {
     if (s.video) {
       const media = s.videoMobile
         ? `<div class="w-full max-w-full md:max-w-[450px] mx-auto">
-             <video controls class="block w-full h-auto max-h-[60vh] md:max-h-[500px] rounded-2xl ring-1 ring-white/10 shadow-inner object-contain bg-black">
+             <video controls playsinline style="touch-action:auto" class="block w-full h-auto max-h-[60vh] md:max-h-[500px] rounded-2xl ring-1 ring-white/10 shadow-inner object-contain bg-black">
                <source src="${s.video}" type="video/mp4">
              </video>
            </div>`
-        : `<video controls class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
+        : `<video controls playsinline style="touch-action:auto" class="w-full rounded-2xl ring-1 ring-white/10 shadow-inner">
              <source src="${s.video}" type="video/mp4">
            </video>`;
       return `<article class="w-full shrink-0 snap-start p-6 md:p-10">
