@@ -4,14 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css">
-
   <title>PORTFOLIO SAJED BOUCHADDAKH</title>
-
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { theme: { extend: {} } };</script>
-  
-
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto; }
@@ -23,26 +18,50 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/50">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-      <a href="#presentation" class="font-semibold tracking-wider uppercase">
-        PORTFOLIO SAJED BOUCHADDAKH
-      </a>
+      <a href="#presentation" class="font-semibold tracking-wider uppercase">PORTFOLIO SAJED BOUCHADDAKH</a>
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#presentation" class="hover:text-blue-300">Présentation</a>
-        <a href="#projets" class="hover:text-blue-300">Projets</a>
-        <a href="#apropos" class="hover:text-blue-300">À Propos</a>
-        <a href="#contact" class="hover:text-blue-300">Contact</a>
+        <a href="#projets"      class="hover:text-blue-300">Projets</a>
+        <a href="#apropos"      class="hover:text-blue-300">À Propos</a>
+        <a href="#contact"      class="hover:text-blue-300">Contact</a>
       </nav>
       <a href="#contact" class="md:hidden rounded-xl bg-blue-600 hover:bg-blue-500 px-3 py-1.5 text-sm">Contact</a>
     </div>
   </header>
 
-  <!-- Emplacements où injecter les sections -->
   <main>
     <div data-include="assets/partials/presentation.html"></div>
     <div data-include="assets/partials/projets.html"></div>
     <div data-include="assets/partials/apropos.html"></div>
     <div data-include="assets/partials/contact.html"></div>
   </main>
+
+  <!-- MODAL SHELL (générique — contenu injecté dynamiquement) -->
+  <div id="modal-shell" data-modal class="hidden fixed inset-0 z-[999]" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/75 backdrop-blur-md"></div>
+
+    <!-- Croix mobile -->
+    <button data-modal-close aria-label="Fermer"
+            class="md:hidden fixed top-4 right-4 z-[1000] w-10 h-10 rounded-full
+                   ring-1 ring-white/20 bg-white/10 hover:bg-white/20
+                   flex items-center justify-center text-lg font-bold transition">✕</button>
+
+    <!-- Wrapper centré -->
+    <div class="absolute inset-0 flex items-center justify-center p-4 md:p-6
+                overflow-y-auto overscroll-contain mt-14 md:mt-0">
+      <div class="relative w-full max-w-7xl">
+
+        <!-- Croix desktop -->
+        <button data-modal-close aria-label="Fermer"
+                class="hidden md:flex absolute -top-12 -right-12 z-[1000] w-10 h-10 rounded-full
+                       ring-1 ring-white/20 bg-white/10 hover:bg-white/20
+                       items-center justify-center text-lg font-bold transition">✕</button>
+
+        <!-- Contenu injecté ici -->
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="mt-10 border-t border-white/10">
@@ -51,14 +70,16 @@
     </div>
   </footer>
 
-  <!-- Scripts (ordre important) -->
-  <script src="assets/js/script.js" defer></script>    <!-- modales + sliders -->
-  <script src="assets/js/include.js" defer></script>  <!-- charge les partials -->
+  <!-- Scripts (ordre important : data → render → script → include) -->
+  <script src="assets/js/data.js"    defer></script>
+  <script src="assets/js/render.js"  defer></script>
+  <script src="assets/js/script.js"  defer></script>
+  <script src="assets/js/include.js" defer></script>
 
-  <!-- Maj de l'année -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
     });
   </script>
 </body>
