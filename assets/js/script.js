@@ -174,6 +174,7 @@ function initFadeUp() {
    Boot : attendre les partials
 --------------------------------*/
 function boot() {
+  if (window.Render) window.Render.init(); // popule les grilles + wire le modal shell
   Modal.initAll();
   Slider.initAll();
   initFadeUp();
