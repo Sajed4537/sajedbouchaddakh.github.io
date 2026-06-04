@@ -53,28 +53,7 @@ window.DATA = {
         ],
       },
     ],
-    btp: [
-      {
-        id: 'gabaritBioss',
-        title: 'Gabarit BIOSS',
-        nature: 'Gabarit Revit',
-        status: 'Projet professionnel',
-        years: '2023 – 2025',
-        buttons: [
-          { label: 'Plus de détails', action: 'detail', key: 'gabaritBioss', style: 'outline' },
-        ],
-      },
-      {
-        id: 'coordBIM',
-        title: 'Coordination/Modélisation BIM',
-        nature: 'Projets BIM/BTP',
-        status: 'Projets professionnels',
-        years: '2023 – 2025',
-        buttons: [
-          { label: 'Plus de détails', action: 'detail', key: 'coordBIM', style: 'outline' },
-        ],
-      },
-    ],
+    btp: [],
   },
 
   /* ══════════════════════════════════════════════════
@@ -183,83 +162,6 @@ window.DATA = {
       ],
     },
 
-    gabaritBioss: {
-      title: 'Gabarit BIOSS (Revit)',
-      objective: "Uniformiser et fiabiliser la production des projets BIM au sein du bureau d'études grâce à la création d'un gabarit Revit complet et structuré.",
-      sections: [
-        {
-          title: 'Contenu et structure du gabarit',
-          items: [
-            'Organisation hiérarchique claire des vues, feuilles et familles',
-            'Création d\'un système de nomenclatures et filtres de vues standardisés',
-            "Intégration d'un jeu de gabarits de vues adaptés aux phases d'étude et d'exécution",
-            'Définition d\'une charte graphique cohérente (types de lignes, textes, cotations, hachures, etc.)',
-          ],
-        },
-        {
-          title: 'Missions principales',
-          items: [
-            "Audit des pratiques internes et analyse des besoins des projeteurs",
-            "Structuration de la bibliothèque d'entreprise (familles, cartouches, symboles)",
-            'Rationalisation des paramétrages pour assurer homogénéité et gain de temps',
-            "Rédaction d'un guide d'utilisation du gabarit pour faciliter sa prise en main",
-          ],
-        },
-        {
-          title: 'Résultats et bénéfices',
-          items: [
-            'Standardisation des livrables BIM et réduction des erreurs de production',
-            'Gain significatif en cohérence graphique et en productivité',
-            'Adoption rapide par les équipes grâce à une documentation claire et aux retours utilisateurs',
-          ],
-        },
-        {
-          title: 'Outils et environnement',
-          items: ['Revit'],
-        },
-      ],
-      note: "Ce gabarit constitue désormais la base de travail des projets BIM du bureau d'études BIOSS, garantissant une production homogène, plus rapide et plus fiable pour l'ensemble des équipes.",
-    },
-
-    coordBIM: {
-      title: 'Coordination &amp; Modélisation BIM',
-      objective: "Assurer la production, la cohérence et la coordination technique des maquettes BIM sur plusieurs projets de construction, en phase de conception et d'exécution.",
-      sections: [
-        {
-          title: 'Projets réalisés',
-          items: [
-            '<span class="font-semibold">TRUMPF – Villepinte :</span> Immeuble de bureaux (phase exécution)',
-            '<span class="font-semibold">Marignan – Montreuil :</span> Ensemble mixte bureaux / logements',
-            '<span class="font-semibold">SEQENS – Marly-le-Roi :</span> Résidence de 18 logements',
-          ],
-        },
-        {
-          title: 'Missions principales',
-          items: [
-            "Modélisation des structures béton armé selon les plans d'exécution",
-            'Coordination interdisciplinaire avec les autres corps d\'état techniques',
-            'Extraction et mise en forme des plans de coffrage et coupes à partir des maquettes numériques',
-            'Participation aux réunions de synthèse et gestion des échanges techniques',
-            'Contribution à la mise en place des bonnes pratiques de modélisation au sein du BET',
-          ],
-        },
-        {
-          title: 'Compétences mobilisées',
-          items: [
-            'Maîtrise avancée de Revit pour la modélisation structurelle',
-            'Gestion de la cohérence et des interactions entre disciplines',
-            "Lecture et interprétation des plans de conception et d'exécution",
-            'Communication technique et travail collaboratif',
-            'Production documentaire conforme aux standards internes',
-          ],
-        },
-        {
-          title: 'Outils et environnement',
-          items: ['Revit', 'AutoCAD', 'Navisworks', 'Autodesk Construction Cloud (ACC)'],
-        },
-      ],
-      note: "Cette expérience m'a permis de renforcer mes compétences en modélisation et en coordination BIM, d'acquérir une vision complète du cycle de production en exécution, et de collaborer efficacement avec les différents intervenants pour garantir la qualité et la cohérence des livrables.",
-    },
   },
 
   /* ══════════════════════════════════════════════════
@@ -417,7 +319,6 @@ window.DATA = {
   ══════════════════════════════════════════════════ */
   apropos: [
     { title: 'Compétences (Informatique)', desc: 'Langages, frameworks, bases de données, outils…', key: 'infoSkills' },
-    { title: 'Compétences (BTP/BIM)',      desc: 'Logiciels BIM/SIG',                               key: 'bimSkills'  },
     { title: 'Langues',                    desc: 'Mes langues',                                      key: 'langues'    },
     { title: 'Soft skills',                desc: 'Mes soft skills',                                  key: 'softSkills' },
     { title: 'Hobbies',                    desc: 'Mes hobbies',                                      key: 'hobbies'    },
@@ -512,45 +413,6 @@ window.DATA = {
             { src: 'assets/image/GitHub.png', alt: 'GitHub', bg: true },
           ],
           items: ['Git', 'GitHub'],
-        },
-      ],
-    },
-
-    bimSkills: {
-      title: 'Compétences — BIM & BTP',
-      labels: ['Logiciels BIM & CAO', 'Logiciels SIG'],
-      slides: [
-        {
-          title: 'Logiciels BIM & CAO',
-          intro: 'Maîtrise des outils de modélisation, coordination et production BIM :',
-          logos: [
-            { src: 'assets/image/revit.png',      alt: 'Revit',                      bg: true },
-            { src: 'assets/image/dynamo.png',     alt: 'Dynamo',                     bg: true },
-            { src: 'assets/image/autocad.png',    alt: 'AutoCAD',                    bg: true },
-            { src: 'assets/image/navisworks.png', alt: 'Navisworks',                 bg: true },
-            { src: 'assets/image/acc.png',        alt: 'Autodesk Construction Cloud', bg: true },
-          ],
-          items: [
-            '<span class="font-semibold">Revit :</span> Modélisation structurelle, création de gabarits et extraction documentaire',
-            '<span class="font-semibold">Dynamo :</span> Automatisation de tâches et scripts de paramétrage',
-            '<span class="font-semibold">AutoCAD :</span> Production de détails techniques et mise en plan 2D',
-            '<span class="font-semibold">Navisworks :</span> Coordination interdisciplinaire et détection de conflits',
-            '<span class="font-semibold">Autodesk Construction Cloud (ACC) :</span> Gestion documentaire collaborative',
-          ],
-        },
-        {
-          title: 'Logiciels SIG',
-          intro: "Compétences dans la gestion et l'analyse de données géospatiales appliquées aux projets techniques :",
-          logos: [
-            { src: 'assets/image/arcgis_pro.png',    alt: 'ArcGIS Pro',    bg: true },
-            { src: 'assets/image/arcgis_online.png', alt: 'ArcGIS Online', bg: true },
-            { src: 'assets/image/qgis.png',          alt: 'QGIS',          bg: true },
-          ],
-          items: [
-            '<span class="font-semibold">ArcGIS Pro :</span> Analyse spatiale, création de cartes et gestion de couches de données',
-            '<span class="font-semibold">ArcGIS Online :</span> Publication et partage de données géographiques en ligne',
-            '<span class="font-semibold">QGIS :</span> Traitement et exploitation de données topographiques',
-          ],
         },
       ],
     },
