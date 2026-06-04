@@ -248,7 +248,7 @@ window.Render = (() => {
     const defaultTitle = data.title || data.labels[0] || '';
     const slidesHtml = data.slides.map(slideHtml).join('');
 
-    return `<div class="${MODAL_CARD}">
+    return `<div class="${MODAL_CARD} max-h-[calc(100dvh-9rem)] md:max-h-none overflow-y-auto ios-scroll">
       <div data-slider data-slider-labels='${labelsJson}' class="relative">
         <div class="px-6 md:px-10 pt-8 pb-4">
           <h4 class="slider-title text-3xl font-extrabold tracking-tight" data-default="${defaultTitle}"></h4>
