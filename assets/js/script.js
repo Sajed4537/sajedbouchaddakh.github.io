@@ -122,7 +122,6 @@ class Slider {
 
     // Swipe mobile — ignoré si le touch démarre sur une vidéo
     let startX = null, startY = null, dx = 0, dy = 0;
-    this.track.style.touchAction = 'pan-y';
     this.track.addEventListener('touchstart', (e) => {
       if (e.target.closest('video')) { startX = null; return; }
       startX = e.touches[0].clientX; startY = e.touches[0].clientY;

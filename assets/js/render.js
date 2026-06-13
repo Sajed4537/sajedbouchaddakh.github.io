@@ -255,7 +255,7 @@ window.Render = (() => {
         </div>
         <div class="px-4 md:px-8 pb-10">
           <div class="overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-            <div class="slider-track flex transition-transform duration-400 ease-out" style="transform:translateX(0)">
+            <div class="slider-track flex transition-transform duration-400 ease-out" style="transform:translateX(0);touch-action:pan-y">
               ${slidesHtml}
             </div>
           </div>
