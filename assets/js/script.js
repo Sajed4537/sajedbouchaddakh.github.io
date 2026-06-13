@@ -121,24 +121,23 @@ class Slider {
     });
 
     // Swipe mobile — ignoré si le touch démarre sur une vidéo
-    let startX = null, startY = null, dx = 0, dy = 0, axis = null;
+    let startX = null, startY = null, dx = 0, dy = 0;
     this.track.style.touchAction = 'pan-y';
     this.track.addEventListener('touchstart', (e) => {
       if (e.target.closest('video')) { startX = null; return; }
       startX = e.touches[0].clientX; startY = e.touches[0].clientY;
-      dx = 0; dy = 0; axis = null;
+      dx = 0; dy = 0;
     }, { passive: true });
     this.track.addEventListener('touchmove', (e) => {
       if (startX === null) return;
       dx = e.touches[0].clientX - startX;
       dy = e.touches[0].clientY - startY;
-      if (axis === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-        axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
-      }
     }, { passive: true });
     this.track.addEventListener('touchend', () => {
-      if (startX !== null && axis === 'x' && Math.abs(dx) > 35) { dx < 0 ? this.nextSlide() : this.prevSlide(); }
-      dx = 0; dy = 0; startX = null; axis = null;
+      if (startX !== null && Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
+        dx < 0 ? this.nextSlide() : this.prevSlide();
+      }
+      dx = 0; dy = 0; startX = null;
     }, { passive: true });
 
     // Clavier si modal ouverte
