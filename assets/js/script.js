@@ -135,8 +135,7 @@ class Slider {
       if (axis === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
         axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
       }
-      if (axis === 'x' && e.cancelable) e.preventDefault();
-    }, { passive: false });
+    }, { passive: true });
     this.track.addEventListener('touchend', () => {
       if (startX !== null && axis === 'x' && Math.abs(dx) > 35) { dx < 0 ? this.nextSlide() : this.prevSlide(); }
       dx = 0; dy = 0; startX = null; axis = null;
